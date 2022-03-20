@@ -1,0 +1,93 @@
+gApplication
+
+Strucure:
+
+ Page d'acceuil
+  _Bouton se connecter: lien vers page client
+  _Bouton creer un compte: lien vers pages d'inscription
+  _liste des établissements avec lien vers pages établissements
+
+Page d'incription
+ formulaire d'inscription
+    .Champs:
+            -Nom
+            -Prenom
+            -Adresse Email
+            -Mot de passe
+    .lien vers page client
+    
+ page d'etablissement (7pages)
+  _catalogue des chambres: lien vers formulaire de reservation
+
+ page Client
+  _lien vers formulaire de reservation
+  _resumé de reservation
+  _Bouton annuler ma reservation
+  _Bouton nous contacter: lien vers page de contact
+
+
+ Formulaire de reservation
+    .Champs:
+            -établissement : liste des établissement(déja rempli si connection depuis page d'établissement)
+            -suite: lien vers page d'établissements(déja rempli si connection depuis page d'établissement)
+            -date d'arriver
+            -date de départ
+           
+
+Page de contact
+ Formulaire de contact
+    -NOM 
+    -PRENOM
+    -EMAIL
+    -Sujet du message:
+       Je souhaite poser une reclamation,
+       Je souhaite commander un service supplémentaire
+       Je souhaite en savoir plus sur une suite
+       j'ai un souci avec cette application
+    -Message
+       
+
+
+
+
+Base de donnée
+ Classes:
+    _Clients:
+      .id
+      .Nom
+      .Prenom
+      .Adresse Email
+      .Mot de passe
+      
+
+    _Suites:
+     .établissement:Adresse
+     .Titre.
+     .prix
+     .clé suite
+
+    _Reservation
+     .client(clé client)
+     .suite(clé suite)
+     .date de départ
+     .date d'arrivé
+     .clé reservation
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+        
+      

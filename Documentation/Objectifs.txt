@@ -1,0 +1,69 @@
+Developper Une application de reservation de chambres pour un groupe hotelier
+
+A.Objectifs de l'Application:
+
+    Utilisateurs :
+      _Administrateur
+      _Gerant d'établissement
+      _Clients
+   
+    I.Pour l'administrateur:
+      _Pouvoir CREER, MODIFIER ou SUPPRIMER un établissement.
+      _Effectuer la maintenance pour les gérants d'établissement.
+     
+    II.Pour les gérants:
+      _Pouvoir indiquer une ou plusieurs suites.
+
+    III.Pour les Visiteurs:
+     _Permettre aux utilisateurs d'avoir acces à la liste des différents Hotels.
+     _Informer de la disponibilité des chambres.
+     _Des caractéristiques des différentes chambres
+     _Créer un COMPTE/ se CONNECTER
+     _Voir ses reservations
+     _Annuler une reservation au moins 3 jour avent la date inscrite.
+     _Si le client accède à la page de reservation depuis la page les champs ETABLISSEMENT et SUITE serons déja remplis.
+     _Contacter le groupe hotelier en remplissant un FORMULAIRE de CONTACT à destination de l'ADMINISTRATEUR avec comme champ NOM, PRENOM, EMAIL, Sujet du message:
+       (Je souhaite poser une reclamation, Je souhaite commander un service supplémentaire, Je souhaite en savoir plus sur une suite, j'ai un souci avec cette application) 
+
+
+
+B.Objectifs Devoir:
+
+ I.Front-end:
+   _MAQUETTE de l'application
+   _Interface utilisateur web STATIQUE et ADAPTABLE
+   _Interface utilisateur web DYNAMIQUE
+   _Interface utilisateur avec SOLUTION DE GESTION DE CONTENU ou E-COMMERCE.
+
+ II.Back-end:
+   _BASE DE DONNEES
+   _COMPOSANTS D'ACCES aux DONNEES
+   _COMPOSANTS dans une application de GESTION de CONTENU ou E-COMMERCE
+
+ III.Livrables
+   _lIEN GITHUB contenant:
+     .CODE de l'application
+     .FICHIER README.md contenant la DEMARCHE A SUIVRE pour: 
+        -Le DEPLOIMENT EN LOCAL 
+        -La CREATION d'un ADMINISTRATEUR pour le BACK OFFICE
+
+     .MANUEL D'UTILISATION au format PDF expliquant comment tester le fruit de votre travail
+     .FICHIER de CREATION et d'ALIMENTATION de la BASE DE DONNEES: 
+        -MIGRATIONS 
+        -FIXTURES ou SCRIPT SQL A LA MAIN !ATENTION: ne pas générer par le biais d'une interface graphique(ex: PHPMyAdmin)
+
+     .DOCUMENTATION TECHNIQUE au format PDF:
+        -TECHNOLOGIES choisies 
+        -CONFIGURATION de l'ENVIRRONEMENT de TRAVAIL 
+        -DIAGRAMME DE CLASSE ou MODELE PHYSIQUE de DONNEES 
+        -DIAGRAMME de CAS d'UTILISATION 
+        -DIAGRAMME de SEQUENCES
+
+     .Une CHARTE GRAPHIQUE au format PDF contenant:
+        -PALETTE de COULEURS
+        -PALETTE des POLICES
+        -EXPORT des WIREFRAMES des PRINCIPALES FONCTIONALITes(en version mobile et DESKTOP)
+
+
+   _lien de la version EN LIGNE du projet
+   _lien vers LOGICIEl de GESTION DE TACHES
