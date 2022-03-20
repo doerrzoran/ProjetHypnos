@@ -11,7 +11,7 @@ A.Objectifs de l'Application:
       _Pouvoir CREER, MODIFIER ou SUPPRIMER un établissement.
       _Effectuer la maintenance pour les gérants d'établissement.
      
-    II.Pour les gérants:
+    II.Pour les gérants:r
       _Pouvoir indiquer une ou plusieurs suites.
 
     III.Pour les Visiteurs:
