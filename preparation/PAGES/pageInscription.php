@@ -9,10 +9,10 @@
       require_once "CONSTANTS/header.php";
     ?>
     <nav>
-    <form >
-	    <<label></label>
+    <form>
+	    <label></label>
 	    <input type="" name="">
-        <form method="post" action="scriptInscription.php>
+        <form>
 	        <label>Nom:</label>
 	        <input type="text" name="Name">
 	        <label>Prénom:</label>
@@ -23,7 +23,7 @@
 	        <input type="text" name="password">
 	        <label>confirmation du mot de passe:</label>
 	        <input type="text" name="Name">
-	        <button type="submit" dir=""><a href="PageClient.php">Creer un compte</a></button>
+	        <button>Creer un compte:</button>
         </form>
     <nav>
     <?php
