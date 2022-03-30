@@ -17,10 +17,9 @@ $password2 = $infoCompte['Password2'];
 if($password != $password2){
     echo "veuillez entrer un mot de passe identique!";
 }else{
-    $sql = "INSERT INTO user(Name, Firstname, Mail,	Password, Role) VALUES('$name', '$firstname', '$mail', '$password', 3);";
-    Mysqli_query($conn, $sql);
+    $sql = "INSERT INTO user(Name, Firstname, Mail,	Password, Role) VALUES('$name', '$firstname', '$mail', '$password', 3)";
+    $result = mysqli_query($conn, $sql);
 
-    // header("location: ../front/PageClient.php");
-    $welcome = 'bienvenue '.$firstname;
-    echo '<h2>'.$welcome.'</h2>';
-}
+    echo $result;
+}    
+    
