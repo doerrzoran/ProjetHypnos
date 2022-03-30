@@ -9,7 +9,6 @@
       require_once "CONSTANTS/header.php";
     ?>
     <nav>
-        
     <nav>
     <?php
       require_once "CONSTANTS/footer.php";
