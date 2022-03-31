@@ -9,13 +9,14 @@
       require_once "CONSTANTS/header.php";
     ?>
     <nav>
-    <form>
+    <form method="POST" action="PageClient.php", enctype="multipart/form-data">
 	    <label>Identifiant:</label>
-	    <input type="text" name="id">
+	    <input type="text" name="Mail">
 	    <label>Mot de passe:</label>
 	    <input type="text" name="password">
-	    <button type="submit"><a href="PageClient.php">Se connecter</a></button>
+	    <button type="submit"> Se connecter</button>
     </form>
+
     <a href="pageInscription.php">Creer un compte</a>
     <nav>
     <?php

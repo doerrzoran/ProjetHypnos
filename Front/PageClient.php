@@ -9,7 +9,11 @@
       require_once "CONSTANTS/header.php";
     ?>
     <nav>
-        
+      <?php
+        include "../Back/scriptConnexion.php";
+        include "../Back/scriptInscription.php";
+        require_once '../Back/WelcomUser.php';
+      ?> 
     <nav>
     <?php
       require_once "CONSTANTS/footer.php";

@@ -9,21 +9,18 @@
       require_once "CONSTANTS/header.php";
     ?>
     <nav>
-    <form >
-	    <<label></label>
-	    <input type="" name="">
-        <form method="post" action="scriptInscription.php>
+        <form method="POST" action="PageClient.php" enctype="multipart/form-data">
 	        <label>Nom:</label>
-	        <input type="text" name="Name">
+	        <input type="text" id="name" name="Name">
 	        <label>Prénom:</label>
 	        <input type="text" name="Firstname">
 	        <label>Adresse Email:</label>
 	        <input type="Email" name="email">
 	        <label>mot de passe:</label>
-	        <input type="text" name="password">
+	        <input type="text" name="Password">
 	        <label>confirmation du mot de passe:</label>
-	        <input type="text" name="Name">
-	        <button type="submit" dir=""><a href="PageClient.php">Creer un compte</a></button>
+	        <input type="text" name="Password2">
+	        <button type="submit"> Creer un compte</button>
         </form>
     <nav>
     <?php

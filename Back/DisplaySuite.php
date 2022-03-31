@@ -4,17 +4,10 @@ include_once 'ConnectToDatabase.php';
 // write query
 
 $sql = 'SELECT Title, Establishment, Price, IsOccupied, BookingLink, Description, MainPic, Gallery FROM Suite';
-
-//make query and get result
-
 $result = mysqli_query($conn, $sql);
 $resultCheck = mysqli_num_rows($result);
-
-
-//fetch the resulting rows as an array
 $suites = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-//free result from memory
 mysqli_free_result($result);
 
 //close connection
