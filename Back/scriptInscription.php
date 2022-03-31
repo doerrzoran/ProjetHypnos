@@ -1,12 +1,13 @@
 <?php
 require_once "ConnectToDatabase.php";
-require_once 'UserData.php';
+
 
 // var_dump($_POST);
 $infoCompte = $_POST;
 
-function createNewUser($infoCompte ){
-    
+if(!isset($infoCompte['Password'])) {
+    echo('');
+  }else{ 
     $name = $infoCompte['Name'];
     $firstname = $infoCompte['Firstname'];
     $mail = $infoCompte['email'];
@@ -18,10 +19,15 @@ function createNewUser($infoCompte ){
     }else{
         $sqlInsert = "INSERT INTO User(Name, Firstname, Mail,	Password, Role) VALUES('$name', '$firstname', '$mail', '$password', 3)";
         $resultI = mysqli_query($conn, $sqlInsert);
-        $sqlSelect = "SELECT* FROM User WHERE(Password = '$password')";
-        $resultS = mysqli_query($conn, $sqlSelect);
-        $users = mysqli_fetch_all($resultS, MYSQLI_ASSOC);
-        echo userData($users);
+        if($resultI != 1){
+            die("einscription échouée !");
+        }else{
+            $sqlSelect = "SELECT* FROM User WHERE(Password = '$password')";
+            $resultS = mysqli_query($conn, $sqlSelect);
+            $users = mysqli_fetch_all($resultS, MYSQLI_ASSOC);
+            require_once 'UserData.php';
+            // echo userData($users);
+        }
     };
 }
     

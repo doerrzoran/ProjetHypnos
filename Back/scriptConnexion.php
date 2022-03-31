@@ -6,7 +6,9 @@ require_once "ConnectToDatabase.php";
 
 $infoConnexion = $_POST;
 
-// function identifyUser($infoConnexion){
+If(!isset($infoConnexion['Mail'])){
+  echo ' ';
+}else{
   $mail = $infoConnexion['Mail'];
   $password = $infoConnexion['password'];
 
@@ -18,8 +20,5 @@ $infoConnexion = $_POST;
     echo "utilisateur inconnu!"; 
   }else{
     require_once 'UserData.php';
-    // echo userData($users);
   }
-// }
-
-// echo identifyUser($infoConnexion);
+}

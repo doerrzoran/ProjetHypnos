@@ -1,8 +1,10 @@
 <?php
 require_once 'scriptConnexion.php';
-require_once 'scriptConnexion.php';
+require_once 'scriptInscription.php';
 
-// function userData(){
+if(!isset($users)){
+    echo '';
+    }else{
      foreach($users as $user){
          $userID = $user['ID'];
          $userName = $user['Name'];
@@ -11,7 +13,7 @@ require_once 'scriptConnexion.php';
          $userPassword = $user['Password'];
          $userRole = $user['Role'];
     }
-// }
+}
 
 // echo userData();
 

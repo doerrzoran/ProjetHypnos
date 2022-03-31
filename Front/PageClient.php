@@ -10,8 +10,8 @@
     ?>
     <nav>
       <?php
-        include "../Back/scriptConnexion.php";
-        include "../Back/scriptInscription.php";
+        // include "../Back/scriptInscription.php";
+        // include "../Back/scriptConnexion.php";
         require_once '../Back/WelcomUser.php';
       ?> 
     <nav>
