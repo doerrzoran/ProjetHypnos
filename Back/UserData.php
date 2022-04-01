@@ -1,7 +1,6 @@
 <?php
 
-require_once 'scriptConnexion.php';
-require_once 'scriptInscription.php';
+
 session_start();
 
 if(!isset($users)){
@@ -17,10 +16,4 @@ if(!isset($users)){
     }
 }
 
-// $userID = $_SESSION['ID'];
-// $userName = $_SESSION['userName'];
-// $userFirstname = $_SESSION['userFirstname'];
-// $userMail = $_SESSION['userMail'];
-// $userPassword = $_SESSION['userPassword'];
-// $userRole = $_SESSION['userRole']; 
 

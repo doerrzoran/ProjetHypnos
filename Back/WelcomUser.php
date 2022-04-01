@@ -1,9 +1,8 @@
 <?php
-
-session_start();
-
-    if(isset($_SESSION['userFirstname'])){
-        echo 'Bonjour '.$_SESSION['userFirstname'].'</br>';
+    require_once 'UserID.php';
+    
+    if(isset($userFirstname)){
+        echo 'Bonjour '.$userFirstname.'</br>';
     }
 
       

@@ -16,14 +16,14 @@ if(!isset($infoCompte['Password'])) {
     if($password != $password2){
         echo "veuillez entrer un mot de passe identique!";
     }else{
-        $sqlInsert = "INSERT INTO User(Name, Firstname, Mail,	Password, Role) VALUES('$name', '$firstname', '$mail', '$password', 3)";
-        $resultI = mysqli_query($conn, $sqlInsert);
-        if($resultI != 1){
+        $sql = "INSERT INTO User(Name, Firstname, Mail,	Password, Role) VALUES('$name', '$firstname', '$mail', '$password', 3)";
+        $result = mysqli_query($conn, $sql);
+        if($result != 1){
             die("inscription échouée !");
         }else{
-            $sqlSelect = "SELECT* FROM User WHERE(Password = '$password')";
-            $resultS = mysqli_query($conn, $sqlSelect);
-            $users = mysqli_fetch_all($resultS, MYSQLI_ASSOC);
+            $sql = "SELECT* FROM User WHERE(Password = '$password')";
+            $result = mysqli_query($conn, $sql);
+            $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
             require_once 'UserData.php';
             header('Location: ../front/PageClient.php');
         }
