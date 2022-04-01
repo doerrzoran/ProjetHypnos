@@ -20,5 +20,6 @@ If(!isset($infoConnexion['Mail'])){
     echo "utilisateur inconnu!"; 
   }else{
     require_once 'UserData.php';
+    header('Location: ../front/PageClient.php');
   }
 }

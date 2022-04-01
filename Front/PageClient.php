@@ -10,10 +10,10 @@
     ?>
     <nav>
       <?php
-        // include "../Back/scriptInscription.php";
-        // include "../Back/scriptConnexion.php";
         require_once '../Back/WelcomUser.php';
-      ?> 
+        require_once '../Back/userBooking.php';
+      ?>
+      <p><a href="pageReservation.php">Reserver</a></p> 
     <nav>
     <?php
       require_once "CONSTANTS/footer.php";

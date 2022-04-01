@@ -1,6 +1,6 @@
 <?php
+// require_once "UserData.php";
+session_start();
 
-require_once "ConnectToDatabase.php";
-require_once "siteRoot.php";
 
-header("Location:../Front/PageReservation.php");
+echo $userName;

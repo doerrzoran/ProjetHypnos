@@ -9,7 +9,7 @@
       require_once "CONSTANTS/header.php";
     ?>
     <nav>
-    <form method="POST" action="PageClient.php", enctype="multipart/form-data">
+    <form method="POST" action="../Back/scriptConnexion.php", enctype="multipart/form-data">
 	    <label>Identifiant:</label>
 	    <input type="text" name="Mail">
 	    <label>Mot de passe:</label>
@@ -18,6 +18,7 @@
     </form>
 
     <a href="pageInscription.php">Creer un compte</a>
+    <a href="pageReservation.php">Reserver</a>
     <nav>
     <?php
       require_once "CONSTANTS/footer.php";

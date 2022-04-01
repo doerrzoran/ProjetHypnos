@@ -1,14 +1,10 @@
 <?php
-// require_once 'scriptConnexion.php';
-// require_once 'scriptConnexion.php';
-require_once 'UserData.php';
 
-// function welcomeUser($userFirstname){
-    if(isset($userFirstname)){
-        echo 'Bonjour '.$userFirstname;
+session_start();
+
+    if(isset($_SESSION['userFirstname'])){
+        echo 'Bonjour '.$_SESSION['userFirstname'].'</br>';
     }
-// }
 
-// echo welcomeUser($userFirstname);
       
 
