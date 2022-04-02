@@ -17,8 +17,9 @@
 	    <button type="submit"> Se connecter</button>
     </form>
 
-    <a href="pageInscription.php">Creer un compte</a>
-    <a href="pageReservation.php">Reserver</a>
+    <a href="pageInscription.php">Creer un compte</a></br>
+    <a href="pageReservation.php">Reserver</a></br>
+    <a href="pageMessage.php">Nous écrire</a></br>
     <nav>
     <?php
       require_once "CONSTANTS/footer.php";

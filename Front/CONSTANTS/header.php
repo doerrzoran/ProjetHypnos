@@ -6,7 +6,7 @@
 </head>
 <body>
     <header>
-        <h1>Hypnos</h1>
+        <a href="PageAcueuil.php"><h1>Hypnos</h1></a>
     </header>
 </body>
 </html>

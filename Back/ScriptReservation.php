@@ -1,7 +1,10 @@
 <?php
 require_once "ConnectToDatabase.php";
+require_once "UserID.php";
 
 $infoReservation = $_POST;
+
+var_dump($info);
 
 if(!isset($infoReservation)){
     echo ' ';
