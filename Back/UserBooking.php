@@ -1,4 +1,10 @@
 <?php
  require_once 'BookingData.php';
 
- echo 'vos reservation: du '.$bookingSD.' au '.$bookingED;
+ if(!isset($bookingSD) || !isset($bookingED)){
+  echo ' ';
+}else{
+    echo 'vos reservation: du '.$bookingSD.' au '.$bookingED;
+} 
+
+ 
