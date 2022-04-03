@@ -24,9 +24,9 @@ if(!isset($infoCompte['Name']) || !isset($infoCompte['Firstname']) || !isset($in
         $result = mysqli_query($conn, $sql);
         $VerificationPassword = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-        if($VerificationMail != 0){
+        if($VerificationMail == 0){
             die('cette adresse email est déjà utilisée !');
-        }elseif($VerificationPassword != 0){
+        }elseif($VerificationPassword == 0){
                 die('ce mot de passe est déja utilisé !');
         }else{ 
             $sql = "INSERT INTO User(Name, Firstname, Mail,	Password, Role) VALUES('$name', '$firstname', '$mail', '$password', 3)";
