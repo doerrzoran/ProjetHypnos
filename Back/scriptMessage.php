@@ -17,22 +17,24 @@ if(!isset($messageInfo)){
     $messageBody = $messageInfo["MessageBody"];
     echo $messageBody.'</br>';
 
-    $sql = "SELECT ID FROM User Where( Role = 1)";
+    $sql = "SELECT * FROM User Where( Role = 1)"; //changer pour ne récupéré qu'un seul admin si il y en a plusieurs
     $result = mysqli_query($conn, $sql);
     $recepients = mysqli_fetch_all($result, MYSQLI_ASSOC);
     foreach($recepients as $recepient){
         $recepientID = $recepient['ID'];
+        $destination = $recepient['Mail'];
     }
 
-    $sql = "SELECT* FROM SubjectMessage_Ref WHERE(ID = '$subject')";
+    $sql = "SELECT * FROM SubjectMessage_Ref WHERE(ID = '$subject')";
         $result = mysqli_query($conn, $sql);
         $labels = mysqli_fetch_all($result, MYSQLI_ASSOC);
         foreach($labels as $label){
-            $subject = $label['ID'];
+            $subjectID = $label['ID'];
+            $subject = $label['Label'];
         }
 
 
-    $sql = "INSERT INTO Message(Name, Firstname, mail, MessageBody, Recipient, Subject) VALUES('$senderName', '$senderFirstname', '$senderMail', '$messageBody', '$recepientID',  '$subject')";
+    $sql = "INSERT INTO Message(Name, Firstname, mail, MessageBody, Recipient, Subject) VALUES('$senderName', '$senderFirstname', '$senderMail', '$messageBody', '$recepientID',  '$subjectID')";
     $result = mysqli_query($conn, $sql);
 
     
@@ -40,25 +42,11 @@ if(!isset($messageInfo)){
     if($result == 0){
        die('message non enregistré !</br>');
     }else{
-        $sql = "SELECT Mail FROM User Where( Role = 1)";
-        $result = mysqli_query($conn, $sql);
-        $adminMails = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        foreach($adminMails as $adminMail){
-            $destination = $adminMail['Mail'];
-            // ini_set(sendmail_from, 'doerrzoran@gmail.com');
-            mail($destination, $subject, $messageBody);
-            // ini_restore(sendmail_from); 
-            if(mail($destination, $subject, $messageBody) == NULL){
-                echo 'Erreur d\'envoie</br>';
-            }else{ 
-                echo 'message envoyé !</br>';
-            }
+        $returnMail = mail($destination, $subject, $messageBody);
+        if($returnMail === false){
+            echo 'Erreur d\'envoie</br>';
+        }else{ 
+            echo 'message envoyé !</br>';
         }
-    
     }
-
-
-
-
-
 }
