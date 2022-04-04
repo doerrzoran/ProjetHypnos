@@ -42,11 +42,16 @@ if(!isset($messageInfo)){
     if($result == 0){
        die('message non enregistré !</br>');
     }else{
-        $returnMail = mail($destination, $subject, $messageBody);
-        if($returnMail === false){
-            echo 'Erreur d\'envoie</br>';
-        }else{ 
-            echo 'message envoyé !</br>';
+        
+        $headers = "Content-Type: text/plain; charset=utf-8\r\n";
+        $headers .= "From: hypnos2222222@gmail.com\r\n";
+            
+            
+        if(mail($destination, $subject, $messageBody, $headers))
+        {
+            echo("message envoyé");
+        } else {
+            echo("Erreur !");
         }
     }
 }
