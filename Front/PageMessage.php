@@ -9,7 +9,7 @@
       require_once "CONSTANTS/header.php";
     ?>
       <nav>
-   <form method="POST" action="../Back/scriptMessage.php", enctype="multipart/form-data">
+   <form method="POST" action="../Back/scriptMessage.php" enctype="multipart/form-data">
   	<label>Nom:</label>
   	<input type="text" name="Name">
   	<label>Prénom:</label>

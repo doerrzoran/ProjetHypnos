@@ -7,15 +7,10 @@ if(!isset($messageInfo)){
     
 }else{
     $senderName = $messageInfo["Name"];
-    echo $senderName.'</br>';
     $senderFirstname = $messageInfo["Firstname"];
-    echo $senderFirstname.'</br>';
     $senderMail = $messageInfo["Mail"];
-    echo $senderMail.'</br>';
     $subject = $messageInfo["Subject"];
-    echo $subject.'</br>';
     $messageBody = $messageInfo["MessageBody"];
-    echo $messageBody.'</br>';
 
     $sql = "SELECT * FROM User Where( Role = 1)"; //changer pour ne récupéré qu'un seul admin si il y en a plusieurs
     $result = mysqli_query($conn, $sql);
