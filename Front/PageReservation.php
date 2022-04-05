@@ -9,13 +9,16 @@
       require_once "CONSTANTS/header.php";
     ?>
     <nav>
-        <form method="POST" action="../Back/scriptReservation.php" enctype="multipart/form-data">
+    <?php
+      require_once "../Back/formReservation.php";
+    ?>
+        <!-- <form method="POST" action="../Back/scriptReservation.php" enctype="multipart/form-data">
           <label>veuillez choisir un établissement :</label>
             <select name="establishment">
               <option value="1">Paris</option>
               <option value="2">Bordeaux</option>
               <option value="3">Saint-Malo</option>
-              <option value="4">La rochelle</option>
+              <option value="4" >La rochelle</option>
               <option value="5">Nice</option>
               <option value="6">Cherbourg</option>
               <option value="7">Bayonne</option>
@@ -36,10 +39,11 @@
           <label>date d'arrivé :</label><input type="date" name="startDate">
           <label>date de départ :</label><input type="date" name="endDate">
           <button type="submit">reserver</button>
-        </form>
+        </form> -->
     <nav>
     <?php
       require_once "CONSTANTS/footer.php";
     ?>  
 </body>
 </html>
+

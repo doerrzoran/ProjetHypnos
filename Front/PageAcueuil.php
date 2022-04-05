@@ -9,13 +9,10 @@
       require_once "CONSTANTS/header.php";
     ?>
     <nav>
-    <form method="POST" action="../Back/scriptConnexion.php", enctype="multipart/form-data">
-	    <label>Identifiant:</label>
-	    <input type="text" name="Mail">
-	    <label>Mot de passe:</label>
-	    <input type="text" name="password">
-	    <button type="submit"> Se connecter</button>
-    </form>
+    <?php
+      require_once "../back/formConnexion.php";
+    ?>
+  
 
     <a href="pageInscription.php">Creer un compte</a></br>
     <a href="pageReservation.php">Reserver</a></br>
