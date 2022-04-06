@@ -13,7 +13,7 @@
         require_once '../Back/WelcomUser.php';
         require_once '../Back/UserBooking.php';
       ?>
-      <p><a href="pageReservation.php">Reserver</a></p></br>
+      <p><a href="../Back/resetReservation.php">Reserver</a></br></p></br>
       <a href="pageMessage.php">Nous écrire</a></br>
     <nav>
     <?php

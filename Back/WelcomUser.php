@@ -1,8 +1,8 @@
 <?php
     require_once 'UserID.php';
     
-    if(isset($userFirstname)){
-        echo 'Bonjour '.$userFirstname.'</br>';
+    if(isset($firstname)){
+        echo 'Bonjour '.$firstname.'</br>';
     }
 
       

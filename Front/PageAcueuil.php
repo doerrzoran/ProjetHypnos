@@ -10,13 +10,10 @@
     ?>
     <nav>
     <?php
-      require_once "../back/formConnexion.php";
+      require_once "../back/isConnected.php";
     ?>
-  
-
-    <a href="pageInscription.php">Creer un compte</a></br>
-    <a href="pageReservation.php">Reserver</a></br>
-    
+    <!-- <a href="pageInscription.php">Creer un compte</a></br> -->
+    <a href="../Back/resetReservation.php">Reserver</a></br>
     <a href="pageMessage.php">Nous écrire</a></br>
     <?php
       require_once "ListeEtablissement.php";

@@ -1,5 +1,6 @@
 <?php
 require_once "ConnectToDatabase.php";
+require_once 'UserID.php';
 
 if(!isset($_SESSION['ID'])){
     require_once "UserID.php";
