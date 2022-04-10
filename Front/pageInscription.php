@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html> 
 <head>
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="../Assets/css/Style.css">
 	<title>Hypnos</title>
 </head>
 <body>
@@ -12,7 +12,6 @@
 	<?php
       require_once "../Back/formInscription.php";
     ?>
-       
     <nav>
     <?php
       require_once "CONSTANTS/footer.php";
