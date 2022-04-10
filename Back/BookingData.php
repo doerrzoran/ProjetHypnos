@@ -2,7 +2,6 @@
 require_once 'ConnectToDatabase.php';
 require_once 'UserID.php';
 
-
 $sql = "SELECT* FROM Booking WHERE(Client = '$user')";
 $result = mysqli_query($conn, $sql);
   if($result == false){
