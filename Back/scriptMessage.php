@@ -44,7 +44,8 @@ if(!isset($messageInfo)){
             
         if(mail($destination, $subject, $messageBody, $headers))
         {
-            echo("message envoyé");
+            header('Location: ../Front/PageAcceuil.php');
+            // echo("message envoyé");
         } else {
             echo("Erreur !");
         }
