@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html> 
 <head>
-    <link rel="stylesheet" type="text/css" href="CSS/style.css"> 
+    <link rel="stylesheet" type="text/css" href="../Assets/css/Style.css"> 
 	<title>Hypnos</title>
 </head>
 <body>
