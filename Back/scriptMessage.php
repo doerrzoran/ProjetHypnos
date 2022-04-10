@@ -32,20 +32,17 @@ if(!isset($messageInfo)){
     $sql = "INSERT INTO Message(Name, Firstname, mail, MessageBody, Recipient, Subject) VALUES('$senderName', '$senderFirstname', '$senderMail', '$messageBody', '$recepientID',  '$subjectID')";
     $result = mysqli_query($conn, $sql);
 
-    
-
     if($result == 0){
        die('message non enregistré !</br>');
     }else{
         
         $headers = "Content-Type: text/plain; charset=utf-8\r\n";
         $headers .= "From: hypnos2222222@gmail.com\r\n";
-            
-            
-        if(mail($destination, $subject, $messageBody, $headers))
-        {
+        $message = mail($destination, $subject, $messageBody, $headers); 
+        if($message){
+            session_start();
+            $_SESSION['message'] = $message;
             header('Location: ../Front/PageAcceuil.php');
-            // echo("message envoyé");
         } else {
             echo("Erreur !");
         }

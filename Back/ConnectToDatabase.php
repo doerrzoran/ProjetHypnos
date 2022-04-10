@@ -12,17 +12,15 @@ if(!$conn){
 function insertintoDatabase($table, $key, $data, $conn){
   $sql = "INSERT INTO $table($key) VALUES($data)";
   $result = mysqli_query($conn, $sql);
+  return $result;
 }
 
 
 function selectFromDatabase($table, $key, $data, $conn){
-  $sql = "SELECT* FROM $table WHERE($key = $data)";
+  $sql = "SELECT * FROM $table WHERE $key = '$data'";
+  // $sql = "SELECT* FROM $table WHERE $key = '$data'";
   $result = mysqli_query($conn, $sql);
-  var_dump($result);
+  $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  return $row;
 }
 
-
-
- // $sql = "SELECT* FROM User WHERE Password ='$password'";
-            // $result = mysqli_query($conn, $sql);
-            // $VerificationPassword = mysqli_fetch_all($result, MYSQLI_ASSOC);

@@ -36,12 +36,12 @@ foreach($suites as $suite){
        ?><form method="POST" action="../Back/scriptSuite.php" enctype="multipart/form-data">
          <input type="hidden" name="Suite" value="<?= $suiteTitle ?>">
          <input type="hidden" name="Establishment" value="<?= $establishmentName ?>">
-       <input type="submit" value="reserver cette suite"></form> <?php;
+       <input type="submit" value="reserver cette suite"></form> <?php
      }
      
-     echo  '<a href="../www.booking.com">'.htmlspecialchars($suite['BookingLink']).'</a></br>';
+     echo'<a href="http://www.booking.com">'.htmlspecialchars($suite['BookingLink']).'</a></br>';
      echo $suite['Description'].'</br>';
-     echo $suite['MainPic'].'</br>';
+     echo '<img src="'.$suite['MainPic'].'">';
      echo $suite['Gallery'].'</br>';
      echo $suite['Price'].' €'.'</br>';
    }
