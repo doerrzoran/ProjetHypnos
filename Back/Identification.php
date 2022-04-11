@@ -1,11 +1,12 @@
 <?php
 require_once "ConnectToDatabase.php";
 
-$sql = "SELECT* FROM User WHERE Password ='$password' AND Mail = '$mail'";
-$result = mysqli_query($conn, $sql);
-$users = mysqli_fetch_all($result, MYSQLI_ASSOC);
+$users = selectFromDatabase('User', 'Mail', $mail, $conn);
+// $sql = "SELECT* FROM User WHERE Password ='$password' AND Mail = '$mail'";
+// $result = mysqli_query($conn, $sql);
+// $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-if(mysqli_num_rows($result) == 0){
+if($users == NULL){
   echo "utilisateur inconnu!"; 
 }else{
   foreach($users as $user){

@@ -9,9 +9,10 @@ if(!isset($infoEstablishment)){
     $establishment = $infoEstablishment['Establishment'];
 }
 
-$sql = "SELECT* FROM Establishment WHERE(ID = $establishment)";
-$result = mysqli_query($conn, $sql);
-$establishments = mysqli_fetch_all($result, MYSQLI_ASSOC);
+$establishments = selectFromDatabase('Establishment', 'ID', $establishment, $conn);
+// $sql = "SELECT* FROM Establishment WHERE(ID = $establishment)";
+// $result = mysqli_query($conn, $sql);
+// $establishments = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 foreach($establishments as $establishment){
     $establishmentID = $establishment['ID'];

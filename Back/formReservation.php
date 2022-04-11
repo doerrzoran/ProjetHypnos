@@ -25,7 +25,7 @@ if(isset($_SESSION['Suite'])){
              <option value='1'>Paris</option>
              <option value='2'>Bordeaux</option>
              <option value='3'>Saint-Malo</option>
-             <option value='4' >La rochelle</option>
+             <option value='4'>La rochelle</option>
              <option value='5'>Nice</option>
              <option value='6'>Cherbourg</option>
              <option value='7'>Bayonne</option>

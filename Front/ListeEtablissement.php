@@ -14,7 +14,7 @@
         <select name="Establishment">
           <option value="1">Hotel Hypnos Paris</option>
           <option value="2">Hotel Hypnos Bordeaux</option>
-          <option value="23">Hotel Hypnos Saint-Malo</option>
+          <option value="3">Hotel Hypnos Saint-Malo</option>
           <option value="4">Hotel Hypnos La Rochelle</option>
           <option value="5">Hotel Hypnos Nice</option>
           <option value="6">Hotel Hypnos Cherbourg</option>

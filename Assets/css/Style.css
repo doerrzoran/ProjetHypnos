@@ -2,7 +2,9 @@ header{
     background-color: purple;
 }
 
-
 footer{
     background-color: gray;
+    position:absolute;
+    bottom:0;
+    width:100%;
 }
