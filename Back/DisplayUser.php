@@ -4,6 +4,7 @@ include_once 'ConnectToDatabase.php';
 
 // write query
 
+$users = 
 $sql = 'SELECT ID, Name, Firstname, Mail,	Password, Role FROM User';
 $result = mysqli_query($conn, $sql);
 $users = mysqli_fetch_all($result, MYSQLI_ASSOC);

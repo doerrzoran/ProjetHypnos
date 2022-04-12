@@ -15,12 +15,16 @@ function insertintoDatabase($table, $key, $data, $conn){
   return $result;
 }
 
-
 function selectFromDatabase($table, $key, $data, $conn){
   $sql = "SELECT * FROM $table WHERE $key = '$data'";
-  // $sql = "SELECT* FROM $table WHERE $key = '$data'";
   $result = mysqli_query($conn, $sql);
   $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
   return $row;
 }
 
+function getEstablishmentAndSuite($conn){
+  $sql = "SELECT e.ID, e.Name, s.ID suite_id, s.Title FROM establishment e JOIN suite s ON s.establishment = e.ID";
+  $result = mysqli_query($conn, $sql);
+  $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  return $row;
+}
