@@ -21,15 +21,11 @@ if(!isset($_SESSION['ID'])){
             echo 'veuillez renseigner une suite';
         }else{
             $suites = selectFromDatabase('Suite', 'ID', $suite, $conn);
-            // $sql = "SELECT* FROM Suite WHERE(ID = '$suite');";
-            // $result = mysqli_query($conn, $sql);
-            // $suites = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            
 
             foreach($suites as $suite){
                 $suiteID = $suite['ID'];
                 $result = insertintoDatabase('Booking', 'StartingDate, EndingDate, Suite,  Client', "'$startDate', '$endDate', '$suiteID',  '$client'", $conn);
-                // $sql = "INSERT INTO Booking(StartingDate, EndingDate, Suite,  Client) VALUES('$startDate', '$endDate', '$suiteID',  '$client');";
-                // $result = mysqli_query($conn, $sql);
                     if($result != 1){
                         die("reservation échouée !");
                     }else{

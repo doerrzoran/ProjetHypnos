@@ -23,16 +23,11 @@ class ScriptInscription{
         }else{
             require_once "ConnectToDatabase.php";
             $verificationMail = selectFromDatabase('User', 'Mail', $mail, $conn);
-            // $verificationPassword = selectFromDatabase('User', 'Password', $password, $conn);
-
             if($verificationMail != NULL){
                  exit('cette adresse email est déjà utilisée !');
-            //  }elseif($verificationPassword != NULL){
-            //         exit('ce mot de passe est déja utilisé !');
+            
             }else{ 
                 $result = insertintoDatabase( 'User', 'Name, Firstname, Mail, Password, Role', "'$name', '$firstname', '$mail', '$password', 3", $conn);
-                // $sql = "INSERT INTO User(Name, Firstname, Mail,	Password, Role) VALUES('$name', '$firstname', '$mail', '$password', 3)";
-                // $result = mysqli_query($conn, $sql);
                 if($result != 1){
                     die("inscription échouée !");
                 }else{

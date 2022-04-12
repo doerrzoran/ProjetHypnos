@@ -4,10 +4,8 @@ include_once 'ConnectToDatabase.php';
 session_start();
 $establishmentID = $_SESSION['EstablishmentID'];
 
-$sql = "SELECT * FROM Establishment WHERE (ID = '$establishmentID')";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
-$establishments = mysqli_fetch_all($result, MYSQLI_ASSOC);
+$establishments = selectFromDatabase('Establishment', 'ID', $establishmentID, $conn);
+
 
 foreach($establishments as $establishment){
   $establishmentName = $establishment['Name'];
@@ -17,10 +15,8 @@ foreach($establishments as $establishment){
 
 echo '<h1>'.$establishmentName.'</h1>' ;
 
-$sql = "SELECT * FROM Suite WHERE (Establishment = '$establishmentID')";
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
-$suites = mysqli_fetch_all($result, MYSQLI_ASSOC);
+$suites = selectFromDatabase('Suite', 'Establishment', $establishmentID, $conn);
+
 
 foreach($suites as $suite){
   $suiteID = $suite['ID'];
