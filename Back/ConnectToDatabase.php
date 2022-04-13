@@ -35,3 +35,9 @@ function getEstablishmentAndSuite($conn){
   $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
   return $row;
 }
+
+function updateDatabase($table, $line, $newvalue, $key, $data, $conn){
+  $sql = "UPDATE $table SET $line = '$newvalue' WHERE $key = '$data'";
+  $result = mysqli_query($conn, $sql);
+  return $result;
+}

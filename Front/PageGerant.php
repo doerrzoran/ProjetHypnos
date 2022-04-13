@@ -11,7 +11,7 @@
     <nav>
     <?php
       require_once '../Back/WelcomUser.php';
-      require_once '../Back/DisplaySuiteManager.php';
+      require_once '../Back/DisplaySuite.php';
       require_once '../Back/formSuite.php';
     ?>
     <nav>
