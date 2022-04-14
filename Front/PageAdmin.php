@@ -11,8 +11,11 @@
     <nav>
       <?php
       require_once '../Back/WelcomUser.php';
+      require_once '../Back/DisplayEstablishment.php';
+      require_once '../Back/formEstablishment.php';
       ?>
     <nav>
+      
     <?php
       require_once "CONSTANTS/footer.php";
     ?>  

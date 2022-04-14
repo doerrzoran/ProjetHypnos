@@ -41,3 +41,10 @@ function updateDatabase($table, $line, $newvalue, $key, $data, $conn){
   $result = mysqli_query($conn, $sql);
   return $result;
 }
+
+
+function deleteFromDatabase($table, $key, $data, $conn){
+  $sql = "DELETE FROM $table WHERE $key = '$data'";
+  $result = mysqli_query($conn, $sql);
+  return $result;
+}

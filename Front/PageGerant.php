@@ -13,6 +13,7 @@
       require_once '../Back/WelcomUser.php';
       require_once '../Back/DisplaySuite.php';
       require_once '../Back/formSuite.php';
+      require_once '../back/formDeleteSuite.php';
     ?>
     <nav>
     <?php
