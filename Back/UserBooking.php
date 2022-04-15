@@ -1,14 +1,16 @@
 <?php
  require_once 'BookingData.php';
- foreach ($bookingArr as $booking){
-   echo $bookingID.'</br>';
- }
+    foreach($bookings as $booking){
+     
+        $bookingID = $booking['ID'];
+        $bookingSD = $booking['StartingDate'];
+        $bookingED = $booking['EndingDate'];
+        $bookingSuite = $booking['Suite'];
+        $booking = $booking['Client'];
+        echo 'vos reservations: du '.$bookingSD.' au '.$bookingED;
+        require 'formDeleteReservation.php';
+    }
 
- if(!isset($bookingSD) || !isset($bookingED)){
-  echo ' ';
-}else{
-    echo 'vos reservations: du '.$bookingSD.' au '.$bookingED;
-    
-} 
+
 
  

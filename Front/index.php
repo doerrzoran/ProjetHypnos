@@ -6,7 +6,7 @@
 </head>
 <body>
     <?php
-      require_once "PageAcueuil.php";
+      require_once "PageAcceuil.php";
     ?>
 </body>
 </html>
