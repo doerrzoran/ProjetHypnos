@@ -13,6 +13,7 @@ foreach($establishments as $establishment){
     echo '</br>';
     echo $establishment['Name'].'</br>';
     echo $establishment['Address'].'</br>';
-     echo $establishment['City'].'</br>';
-     echo $establishment['Name'].'</br>';
+    echo $establishment['City'].'</br>';
+    echo $establishment['Name'].'</br>';
    }
+

@@ -13,6 +13,8 @@
       require_once '../Back/WelcomUser.php';
       require_once '../Back/DisplayEstablishment.php';
       require_once '../Back/formEstablishment.php';
+      require_once '../Back/formAddManager.php';
+      require_once '../Back/formDeleteUser.php';
       ?>
     <nav>
       
