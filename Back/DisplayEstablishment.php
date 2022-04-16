@@ -15,5 +15,7 @@ foreach($establishments as $establishment){
     echo $establishment['Address'].'</br>';
     echo $establishment['City'].'</br>';
     echo $establishment['Name'].'</br>';
+    $establishmentID = $establishment['ID'];
+    require "formModifyEstablishment.php";
    }
 
