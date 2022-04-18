@@ -7,10 +7,8 @@ $infoNewSuite = $_POST;
 if(!isset($infoNewSuite)){
 
 }else{
-    
-    echo '</br>';
     $title = $infoNewSuite['Title'];
-    $establishment = $infoNewSuite['Establissement'];
+    $establishment = $infoNewSuite['Establishement'];
     $price = $infoNewSuite['Price'];
     $bookinglink = $infoNewSuite['BookingLink'];
     $description = $infoNewSuite['Description'];

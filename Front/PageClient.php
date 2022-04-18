@@ -12,7 +12,7 @@
       <?php
         require_once '../Back/WelcomUser.php';
         require_once '../Back/UserBooking.php';
-        require_once '../Back/formDeleteReservation.php';
+        
       ?>
       <p><a href="../Back/resetReservation.php">Reserver</a></br></p></br>
       <a href="pageMessage.php">Nous écrire</a></br>
