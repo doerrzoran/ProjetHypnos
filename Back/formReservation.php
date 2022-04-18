@@ -98,9 +98,12 @@ if(isset($_SESSION['Suite'])){
          
 }
 
+$minDate = date('Y-m-d');
 ?>
 
-<label>date d'arrivé :</label><input type='date' name='startDate'>
-   <label>date de départ :</label><input type='date' name='endDate'>
+   <label>date d'arrivé :</label>
+   <input type='date' name='startDate' min="<?= $minDate ?>">
+   <label>date de départ :</label>
+   <input type='date' name='endDate'>
    <button type='submit'>reserver</button>
  </form>
