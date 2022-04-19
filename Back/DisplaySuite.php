@@ -59,12 +59,22 @@ foreach($suites as $suite){
   $suiteID = $suite['ID'];
   $suiteTitle = $suite['Title'];
 
-  echo '<div class="">';
-     echo '<div class="">';
+  echo '<div >
+          <span >
+             <h3>"'.$suite['Title'].'"</br></h3>
+             <a href="http://www.booking.com">"'.$suite['BookingLink'].'"</a></br>
+             <p>"'.$suite['Description'].'"</p></br>
+             <p>"'.$suite['Price'].'"€</p></br>
+           </span>
+           <span>
+               <img  class="img-responsive" src="'.$suite['MainPic'].'" width="300" height="100">;
+               <img class="d-inline"  class="img-responsive" src="'.$suite['Gallery'].'"  width="100" height="100">
+               <img class="d-inline" class="img-responsive" src="'.$suite['Gallery2'].'"  width="100" height="100">
+               <img class="d-inline" class="img-responsive"src="'.$suite['Gallery3'].'" width="100" height="100">
+          </span></br>
+        </div>';
 
-     echo '</br>';
-     echo '<h3>'.$suite['Title'].'</br></h3>';
-     $isOccupied = $suite['IsOccupied'];
+      $isOccupied = $suite['IsOccupied'];
      if($isOccupied == 1){
        echo "Cette chambre est reservée</br>";
      }else{
@@ -73,18 +83,8 @@ foreach($suites as $suite){
          <input type="hidden" name="Suite" value="<?= $suiteTitle ?>">
          <input type="hidden" name="Establishment" value="<?= $establishmentName ?>">
        <input type="submit" value="reserver cette suite"></form> <?php
-     }
-     
-     echo'<a href="http://www.booking.com">'.$suite['BookingLink'].'</a></br>';
-     echo $suite['Description'].'</br>';
-     echo $suite['Price'].' €'.'</br>';
-     echo '</div>';
-     echo '<div class="">';
-
-     echo '<img  class="img-responsive" src="'.$suite['MainPic'].'">'.'</br>';
-     echo '<img class="img-responsive" class="thumbnail" src="'.$suite['Gallery'].'">'.'</br>';
-     echo '</div>';
-  echo '</div>';
+     }  
+    
    }
 }
   
