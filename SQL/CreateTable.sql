@@ -36,6 +36,8 @@ CREATE TABLE IF NOT EXISTS Suite(
   Description VARCHAR(1000) NOT NULL,  
   MainPic VARCHAR(250) NOT NULL,  
   Gallery VARCHAR(250) NOT NULL,
+  Gallery2 VARCHAR(250) NOT NULL,
+  Gallery3 VARCHAR(250) NOT NULL,
   FOREIGN KEY(Establishment) REFERENCES Establishment(ID),  
   PRIMARY KEY(ID)
 );

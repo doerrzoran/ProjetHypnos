@@ -59,8 +59,11 @@ foreach($suites as $suite){
   $suiteID = $suite['ID'];
   $suiteTitle = $suite['Title'];
 
+  echo '<div class="">';
+     echo '<div class="">';
+
      echo '</br>';
-     echo '<h3>'.htmlspecialchars($suite['Title']).'</br></h3>';
+     echo '<h3>'.$suite['Title'].'</br></h3>';
      $isOccupied = $suite['IsOccupied'];
      if($isOccupied == 1){
        echo "Cette chambre est reservée</br>";
@@ -72,11 +75,16 @@ foreach($suites as $suite){
        <input type="submit" value="reserver cette suite"></form> <?php
      }
      
-     echo'<a href="http://www.booking.com">'.htmlspecialchars($suite['BookingLink']).'</a></br>';
+     echo'<a href="http://www.booking.com">'.$suite['BookingLink'].'</a></br>';
      echo $suite['Description'].'</br>';
-     echo '<img src="'.$suite['MainPic'].'">';
-     echo $suite['Gallery'].'</br>';
      echo $suite['Price'].' €'.'</br>';
+     echo '</div>';
+     echo '<div class="">';
+
+     echo '<img  class="img-responsive" src="'.$suite['MainPic'].'">'.'</br>';
+     echo '<img class="img-responsive" class="thumbnail" src="'.$suite['Gallery'].'">'.'</br>';
+     echo '</div>';
+  echo '</div>';
    }
 }
   
