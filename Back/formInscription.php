@@ -15,5 +15,5 @@
         <label>confirmation du mot de passe:</label>
         <input type="text" name="Password2">
     </div>
-    <button type="submit" class="btn btn-primary">Primary</button>
+    <button type="submit" class="btn btn-primary">Creer un compte</button>
 </form>

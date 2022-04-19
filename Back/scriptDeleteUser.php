@@ -20,6 +20,7 @@ if(!isset($infoDeletion['Mail']) || !isset($infoDeletion['password'])){
         
     }else{
        if($_SESSION['Role'] == 3){
+        session_destroy();
         header('location: ../Front/PageAcceuil.php');
        }else{
         header('location: ../Front/PageAdmin.php');

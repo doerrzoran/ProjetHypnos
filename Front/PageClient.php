@@ -16,7 +16,7 @@
       ?>
       <p><a href="../Back/resetReservation.php">Reserver</a></br></p></br>
       <a href="pageMessage.php">Nous écrire</a></br>
-      <a href="../Back/formDeleteUser.php">supprimer votre compte</a></br>
+      <a href="../Front/PageSuppression.php">supprimer votre compte</a></br>
       
     <nav>
     <?php

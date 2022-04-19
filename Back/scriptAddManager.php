@@ -24,12 +24,11 @@ class ScriptInscription{
             require_once "ConnectToDatabase.php";
             $verificationMail = selectFromDatabase('User', 'Mail', $mail, $conn);
             if($verificationMail != NULL){
-                 exit('cette adresse email est déjà utilisée !');
-            
+                 die('cette adresse email est déjà utilisée !');
             }else{ 
                 $result = insertintoDatabase( 'User', 'Name, Firstname, Mail, Password, Role', "'$name', '$firstname', '$mail', '$password', 2", $conn);
                 if($result != 1){
-                    die("inscription échouée !");
+                    die("le compte n'as pas pu être crée !");
                 }else{
                     header('Location: ../Front/PageAdmin.php');
                 }
