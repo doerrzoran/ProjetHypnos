@@ -1,4 +1,4 @@
-<form method="POST" action="../back/scriptAddsuite.php" enctype="multipart/form-data">
+<form method="POST" action="../Back/scriptAddsuite.php" enctype="multipart/form-data">
     <label>Title</label>
     <input name="Title" type="text">
     <label>Description</label>

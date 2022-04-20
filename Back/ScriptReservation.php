@@ -4,7 +4,7 @@ require_once 'UserID.php';
 
 if(!isset($_SESSION['ID'])){
     require_once "UserID.php";
-    header('location: ../front/Redirection.php'); 
+    header('location: ../Front/Redirection.php'); 
 }else{
     $user = $_SESSION['ID'];
     $userFirstname = $_SESSION['userFirstname'];
@@ -30,7 +30,7 @@ if(!isset($_SESSION['ID'])){
                         die("reservation échouée !");
                     }else{
                         require_once "BookingData.php";
-                        header('Location: ../front/PageClient.php');
+                        header('Location: ../Front/PageClient.php');
                     }
             }
         }  

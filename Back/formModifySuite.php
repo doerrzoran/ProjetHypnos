@@ -1,4 +1,4 @@
-<form method="POST" action="../back/scriptModifySuite.php"enctype="multipart/form-data">
+<form method="POST" action="../Back/scriptModifySuite.php"enctype="multipart/form-data">
     <label>Title</label>
     <input name="ID" type="hidden" value ="<?= $suiteID ?>">
     <input name="Title" type="text">

@@ -2,9 +2,9 @@
 require_once 'UserID.php';
 
 if($role == 1){
-    header('Location: ../front/PageAdmin.php');
+    header('Location: ../Front/PageAdmin.php');
   }elseif($role == 2){
-    header('Location: ../front/PageGerant.php');
+    header('Location: ../Front/PageGerant.php');
   }else{
-    header('Location: ../front/PageClient.php');
+    header('Location: ../Front/PageClient.php');
   }

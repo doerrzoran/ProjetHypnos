@@ -1,5 +1,5 @@
 <h2>ajouter un établissement</h2>
-<form method="POST" action="../back/scriptAddEstablishment.php" enctype="multipart/form-data">
+<form method="POST" action="../Back/scriptAddEstablishment.php" enctype="multipart/form-data">
     <label>Address</label>
     <input name="Address" type="text">
     <label>Ville</label>

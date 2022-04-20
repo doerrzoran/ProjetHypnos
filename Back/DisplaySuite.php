@@ -29,8 +29,8 @@ if(isset($_SESSION['Role']) && ($_SESSION['Role'] == 2)){
        }else{
          echo "Disponible</br>";
        }
-       require '../back/formChangeSuiteStatus.php';
-       require '../back/formModifySuite.php';   
+       require '../Back/formChangeSuiteStatus.php';
+       require '../Back/formModifySuite.php';   
        echo  '<a href="../www.booking.com">'.htmlspecialchars($suite['BookingLink']).'</a></br>';
        echo $suite['Description'].'</br>';
        echo $suite['MainPic'].'</br>';
