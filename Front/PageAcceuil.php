@@ -8,6 +8,7 @@
 <div class="container-fluid">
   <body class="bg-warning">
       <?php
+      echo 'Bonjour';
         require_once "CONSTANTS/header.php";
       ?>
       <nav>
