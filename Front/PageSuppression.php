@@ -11,13 +11,13 @@
       require_once "CONSTANTS/header.php";
     ?>
     <nav>
-	 <?php
-	 require_once "../Back/formMessage.php";
-	 ?>
-	 </nav>
-	 <?php
+    <?php
+      require_once "../Back/formDeleteUser.php";
+    ?>
+    <nav>
+    <?php
       require_once "CONSTANTS/footer.php";
-    ?> 
+    ?>  
 </body>
 </div>
 </html>

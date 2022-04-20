@@ -2,20 +2,22 @@
 <?php
 session_start();
 
+?><form method='POST' action='../Back/scriptReservation.php' enctype='multipart/form-data'> 
+<?php
+
 if(isset($_SESSION['Suite'])){
     $suite = $_SESSION['Suite'];
     $establishment = $_SESSION['Establishment'];
-
-    ?><form method='POST' action='../Back/scriptReservation.php' enctype='multipart/form-data'>
+    
+    
+?>
+    
          <label>veuillez choisir un établissement :</label>
          <input type='select' name='establishment' value='<?=  $establishment; ?>' disabled='disabled' />
          <label>veuillez choisir une suite :</label>
          <input type='select' name='suite' value='<?=  $suite; ?>' disabled='disabled' />
          
-         <label>date d'arrivé :</label><input type='date' name='startDate'>
-         <label>date de départ :</label><input type='date' name='endDate'>
-         <button type='submit'>reserver</button>
-       </form><?php
+<?php
 
 }else{
 
@@ -92,8 +94,16 @@ if(isset($_SESSION['Suite'])){
           }
 
         </script>
-         <label>date d'arrivé :</label><input type='date' name='startDate'>
-         <label>date de départ :</label><input type='date' name='endDate'>
-         <button type='submit'>reserver</button>
-       </form><?php
+<?php
+         
 }
+
+$minDate = date('Y-m-d');
+?>
+
+   <label>date d'arrivé :</label>
+   <input type='date' name='startDate' min="<?= $minDate ?>">
+   <label>date de départ :</label>
+   <input type='date' name='endDate'>
+   <button type='submit'>reserver</button>
+ </form>

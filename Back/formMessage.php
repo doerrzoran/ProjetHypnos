@@ -9,12 +9,17 @@ if(isset($_SESSION['ID'])){
     $mail = $_SESSION['Mail'];
 
     ?><form method='POST' action='../Back/scriptMessage.php' enctype='multipart/form-data'>
+	   <div class="form-group">
          <label>Nom:</label>
          <input type='text' name='Name' value='<?=  $name; ?>' disabled='disabled' />
          <label>Prénom:</label>
          <input type='text' name='Firstname' value='<?=  $firstname; ?>' disabled='disabled' />
+	   </div> 
+		 <div class="form-group">
          <label>Adresse Email:</label>
   	     <input type="Email" name="Mail" value='<?=  $mail; ?>' disabled='disabled'>
+	   </div>
+	   <div class="form-group"> 
          <label>Sujet:</label>
   	    <select name="Subject">
 	    	<option value="1">Je souhaite poser une reclamation</option>
@@ -24,6 +29,7 @@ if(isset($_SESSION['ID'])){
 	    </select>
   	    <label>écrivez votre message</label>
   	    <input type="text" name="MessageBody">
+	  </div>  
   	    <button type="submit">Envoyer</button>
         </form><?php
 

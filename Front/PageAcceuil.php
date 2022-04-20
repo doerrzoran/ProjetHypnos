@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html> 
 <head>
-    <link rel="stylesheet" type="text/css" href="../Assets/css/Style.css">
+    <link rel="stylesheet" type="text/css" href="../Assets/css/bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Hypnos</title>
 </head>
-<body>
-    <?php
-      require_once "CONSTANTS/header.php";
-    ?>
-    <nav>
-    <?php
-      require_once "../back/isConnected.php";
-      require_once "../Back/messageEnvoye.php";
-    ?>
-    <a href="../Back/resetReservation.php">Reserver</a></br>
-    <a href="pageMessage.php">Nous écrire</a></br>
-    <?php
-      require_once "ListeEtablissement.php";
-     ?> 
-    <nav>
-    <?php
-      require_once "CONSTANTS/footer.php";
-    ?>  
-</body>
+<div class="container-fluid">
+  <body class="bg-warning">
+      <?php
+        require_once "CONSTANTS/header.php";
+      ?>
+      <nav>
+      <?php
+        require_once "../Back/isConnected.php";
+      ?>
+      <a href="../Back/resetReservation.php">Reserver</a></br>
+      <a href="pageMessage.php">Nous écrire</a></br>
+      <?php
+        require_once "ListeEtablissement.php";
+       ?> 
+      <nav>
+      <?php
+        require_once "CONSTANTS/footer.php";
+      ?>  
+  </body>
+</div>
 </html>
