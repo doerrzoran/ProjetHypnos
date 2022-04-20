@@ -8,7 +8,7 @@
 
     <div class="page-header">
     <header  class="p-3 mb-2 bg-info text-white">
-        <a class="text-danger" href="Front/PageAcceuil.php"><h1>Hypnos</h1></a>
+        <a class="text-danger" href="PageAcceuil.php"><h1>Hypnos</h1></a>
     </header>
     </div>
 
