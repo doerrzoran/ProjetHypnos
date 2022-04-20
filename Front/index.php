@@ -8,7 +8,7 @@
 <body class="bg-warning">
     <?php
       echo __DIR__;
-      require_once "PageAcceuil.php";
+      require_once(__DIR__."PageAcceuil.php");
     ?>
 </body>
 </html>
