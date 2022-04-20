@@ -7,7 +7,7 @@
 </head>
 <body class="bg-warning">
     <?php
-      require_once "PageAcceuil.php";
+      require_once "./PageAcceuil.php";
     ?>
 </body>
 </html>
