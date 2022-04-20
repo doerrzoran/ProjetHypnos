@@ -7,7 +7,7 @@
 </head>
 <body class="bg-warning">
     <?php
-      echo __DIR__;
+      echo $_SERVER['DOCUMENT_ROOT'];
       require_once(__DIR__."/PageAcceuil.php");
     ?>
 </body>
