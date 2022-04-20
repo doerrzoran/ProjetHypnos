@@ -12,8 +12,7 @@
       ?>
       <nav>
       <?php
-        require_once "../back/isConnected.php";
-        require_once "../Back/messageEnvoye.php";
+        require_once "../Back/isConnected.php";
       ?>
       <a href="../Back/resetReservation.php">Reserver</a></br>
       <a href="pageMessage.php">Nous écrire</a></br>
