@@ -6,9 +6,9 @@
 	<title>Hypnos</title>
 </head>
 <body class="bg-warning">
-  <h1>Ceci est un test</h1>
-    <!-- <?php
+    <?php
+    echo("TEST");
       // require_once "../Front/PageAcceuil.php";
-    ?> -->
+    ?>
 </body>
 </html>
