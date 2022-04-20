@@ -13,6 +13,7 @@
       ?>
       <nav>
       <?php
+      echo 'Bonjour';
         require_once (__DIR__."/Back/isConnected.php");
       ?>
       <a href="../Back/resetReservation.php">Reserver</a></br>
