@@ -14,7 +14,7 @@
       <nav>
       <?php
       echo 'Bonjour';
-        // require_once ($_SERVER['DOCUMENT_ROOT']."/Back/isConnected.php");
+        require_once ($_SERVER['DOCUMENT_ROOT']."/Back/isConnected.php");
       ?>
       <a href="../Back/resetReservation.php">Reserver</a></br>
       <a href="pageMessage.php">Nous écrire</a></br>

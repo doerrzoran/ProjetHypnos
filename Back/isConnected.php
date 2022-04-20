@@ -6,7 +6,7 @@
         ?><a href="../Back/UserRedirection.php">Consulter vos informations</a></br>
         <form methode="POST" action="../Back/Deconnexion.php" enctype="Multipart/form_data"><button>deconnexion</button></form><?php  
     }else{
-        require_once "../back/formConnexion.php";
+        require_once "../Back/formConnexion.php";
         ?><a href="pageInscription.php">Creer un compte</a></br><?php  
     }
 
