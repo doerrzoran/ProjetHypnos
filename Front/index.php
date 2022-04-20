@@ -8,7 +8,12 @@
 <body class="bg-warning">
     <?php
       echo __DIR__;
-      require_once(__DIR__."/PageAcceuil.php");
+      try {
+        require_once(__DIR__."/PageAcceuil.php");
+      } catch (\Throwable $th) {
+        echo("Erreur avec le require")
+      }
+      
     ?>
 </body>
 </html>
