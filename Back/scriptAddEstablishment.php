@@ -7,7 +7,7 @@ var_dump($infoNewEstablishment);
 echo '</br>';
 
 if(!isset($infoNewEstablishment)){
-    header("Location: ../Front/pageAdmin.php");
+    header("Location: ../Front/PageAdmin.php");
 }else{
     $address = $infoNewEstablishment['Address'];
     $city = $infoNewEstablishment['City'];
@@ -18,6 +18,6 @@ if(!isset($infoNewEstablishment)){
     if($newEstablishment != 1){
         die("une erreur est survenue lors de l'enregistrement")
     }else{
-        header("Location: ../Front/pageAdmin.php");
+        header("Location: ../Front/PageAdmin.php");
     }
 }

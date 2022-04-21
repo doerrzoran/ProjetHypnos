@@ -16,8 +16,8 @@
         require_once '../Back/UserBooking.php';
         
       ?>
-      <p><a href="../Back/resetReservation.php">Reserver</a></br></p></br>
-      <a href="pageMessage.php">Nous écrire</a></br>
+      <p><a href="../Back/ResetReservation.php">Reserver</a></br></p></br>
+      <a href="PageMessage.php">Nous écrire</a></br>
       <a href="../Front/PageSuppression.php">supprimer votre compte</a></br>
       
     <nav>

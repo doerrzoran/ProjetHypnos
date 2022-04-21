@@ -18,6 +18,6 @@ if(!isset($infoNewManager)){
     if($newEstablishment != 1){
         echo "erreur d'enregistrement";
     }else{
-        header("Location: ../Front/pageAdmin.php");
+        header("Location: ../Front/PageAdmin.php");
     }
 }

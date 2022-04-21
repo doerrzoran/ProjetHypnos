@@ -14,8 +14,8 @@
       <?php
         require_once ($_SERVER['DOCUMENT_ROOT']."/Back/isConnected.php");
       ?>
-      <a href="../Back/resetReservation.php">Reserver</a></br>
-      <a href="pageMessage.php">Nous écrire</a></br>
+      <a href="../Back/ResetReservation.php">Reserver</a></br>
+      <a href="PageMessage.php">Nous écrire</a></br>
       <?php
         require_once "ListeEtablissement.php";
        ?> 

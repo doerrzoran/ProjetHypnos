@@ -20,7 +20,7 @@ if(!isset($infoNewSuite)){
     if($newSuite != 1){
         echo "erreur d'enregistrement";
     }else{
-        header("Location: ../Front/pageGerant.php");
+        header("Location: ../Front/PageGerant.php");
     }
 }
 
