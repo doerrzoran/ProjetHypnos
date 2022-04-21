@@ -8,12 +8,10 @@
 <div class="container-fluid">
   <body class="bg-warning">
       <?php
-      echo 'Bonjour';
         require_once "CONSTANTS/header.php";
       ?>
       <nav>
       <?php
-      echo 'Bonjour';
         require_once ($_SERVER['DOCUMENT_ROOT']."/Back/isConnected.php");
       ?>
       <a href="../Back/resetReservation.php">Reserver</a></br>
