@@ -11,9 +11,10 @@ if(!$conn){
 
 
 function selectFromDatabase($table, $key, $data, $conn){
-  $sql = "SELECT * FROM ". $table ." WHERE ". $key ." = ".$data;
+  $sql = "select * from ". $table ." WHERE ". $key ." = ".$data;
+  $inter = $sql;
   echo($sql.'/n');
-  $result = pg_query($conn, $sql);
+  $result = pg_query($conn, $inter);
   // $result = pg_query($conn, "select * from user_hypnos");
   $row = pg_fetch_row($result);
   return $row;
