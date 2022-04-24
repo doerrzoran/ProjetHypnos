@@ -23,7 +23,7 @@ if(isset($_SESSION['Suite'])){
   echo 'oui';
 
 
-  require "ConnectToDatabase.php";
+  // require "ConnectToDatabase.php";
 
   echo 'non';
   $result = getEstablishmentAndSuite($conn);
