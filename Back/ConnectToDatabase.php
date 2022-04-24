@@ -15,21 +15,18 @@ function selectFromDatabase($table, $key, $data, $conn){
     die('Connection error: '). pg_connect_error();
   }
   echo("On joue la requête selectFromDatabase");
-  // try {
-  //   $result = pg_query_params($conn, "SELECT * FROM $1 WHERE $2 = $3", [$table, $key, $data]);
-  //   $row = pg_fetch_array($result);
-  //   return $row;
-  // } catch (Exception $e) {
-  //   echo 'Exception reçue : ',  $e->getMessage(), "\n";
+    $result = pg_query_params($conn, "SELECT * FROM $1 WHERE $2 = $3", [$table, $key, $data]);
+    $row = pg_fetch_array($result);
+    return $row;
   // }
-  $result = pg_query($conn, "select * from user_hypnos");
-  if (!$result) {
-    echo "Une erreur s'est produite.\n";
-    exit;
-  }
-  $row = pg_fetch_row($result);
-  print_r($row);
-  return $row;
+  // $result = pg_query($conn, "select * from user_hypnos");
+  // if (!$result) {
+  //   echo "Une erreur s'est produite.\n";
+  //   exit;
+  // }
+  // $row = pg_fetch_row($result);
+  // print_r($row);
+  // return $row;
 }
 
 function insertintoDatabase($table, $key, $data, $conn){
