@@ -20,13 +20,11 @@ if(isset($_SESSION['Suite'])){
 <?php
 
 }else{
-  echo 'oui';
-  echo '1';
-
+  
+  print_r($_SERVER['DOCUMENT_ROOT']);
 
   require "ConnectToDatabase.php";
- echo '2';
-  echo 'non';
+ 
   $result = getEstablishmentAndSuite($conn);
 
   $establishmentArr = [];
