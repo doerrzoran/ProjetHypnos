@@ -21,7 +21,7 @@ if(isset($_SESSION['Suite'])){
 
 }else{
   echo 'oui';
-  echo '1'
+  echo '1';
 
 
   // require "ConnectToDatabase.php";
