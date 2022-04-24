@@ -1,7 +1,8 @@
 <?php
-
+var_dump($_SESSION['id']).'</br>';
 echo '1';
-// session_start();
+session_start();
+var_dump($_SESSION['id']).'</br>';
 echo '2';
 if(isset($_SESSION['id'])){
     echo '3';

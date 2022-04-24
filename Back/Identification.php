@@ -11,5 +11,6 @@ if($user == NULL){
     $_SESSION['mail'] = $user['mail'];
     $_SESSION['password'] = $user['password'];
     $_SESSION['role'] = $user['role'];
+    var_dump($_SESSION['id']).'</br>';
     require_once 'UserRedirection.php';
 }
