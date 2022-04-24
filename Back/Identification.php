@@ -1,5 +1,6 @@
 <?php
 require_once "ConnectToDatabase.php";
+echo 'oui';
 
 $users = selectFromDatabase('user_hypnos', 'Mail', $mail, $conn);
 
