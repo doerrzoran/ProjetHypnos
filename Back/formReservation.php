@@ -21,9 +21,8 @@ if(isset($_SESSION['Suite'])){
 
 }else{
   
-  print_r($_SERVER['DOCUMENT_ROOT']);
 
-  require "ConnectToDatabase.php";
+  require_once ($_SERVER['DOCUMENT_ROOT']."Back/ConnectToDatabase.php");
  
   $result = getEstablishmentAndSuite($conn);
 
