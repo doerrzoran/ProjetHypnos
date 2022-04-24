@@ -11,20 +11,14 @@ if(!$conn){
 
 
 function selectFromDatabase($table, $key, $data, $conn){
-  $sql = "select * from ". $table ." WHERE ". $key ." = ".$data;
-  $inter = $sql;
-  echo($sql.'/n');
-  $result = pg_query($conn, $inter);
-  // $result = pg_query($conn, "select * from user_hypnos");
+  // $sql = "select * from ". $table ." WHERE ". $key ." = ".$data;
+  // $inter = $sql;
+  // echo($sql.'/n');
+  // $result = pg_query($conn, $inter);
+  $result = pg_query($conn, "select * from user_hypnos");
   $row = pg_fetch_row($result);
   return $row;
 }
-
-// function executeQuery($sql, $conn){
-//   $result = pg_query($sql, $inter);
-//   $row = pg_fetch_row($result);
-//   return $row;
-// }
 
 function insertintoDatabase($table, $key, $data, $conn){
   $query = "INSERT INTO $table($key) VALUES($data)";
