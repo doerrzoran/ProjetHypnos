@@ -12,7 +12,7 @@ if(!isset($messageInfo)){
     $subject = $messageInfo["Subject"];
     $messageBody = $messageInfo["MessageBody"];
 
-    $recepients = selectFromDatabase('User', 'ID', 1152, $conn);
+    $recepients = selectFromDatabase('user_hypnos', 'ID', 1152, $conn);
     foreach($recepients as $recepient){
         $recepientID = $recepient['ID'];
         $destination = $recepient['Mail'];

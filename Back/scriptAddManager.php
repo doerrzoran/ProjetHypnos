@@ -22,11 +22,11 @@ class ScriptInscription{
             die("veuillez entrer un mot de passe identique!");
         }else{
             require_once "ConnectToDatabase.php";
-            $verificationMail = selectFromDatabase('User', 'Mail', $mail, $conn);
+            $verificationMail = selectFromDatabase('user_hypnos', 'Mail', $mail, $conn);
             if($verificationMail != NULL){
                  die('cette adresse email est déjà utilisée !');
             }else{ 
-                $result = insertintoDatabase( 'User', 'Name, Firstname, Mail, Password, Role', "'$name', '$firstname', '$mail', '$password', 2", $conn);
+                $result = insertintoDatabase( 'user_hypnos', 'Name, Firstname, Mail, Password, Role', "'$name', '$firstname', '$mail', '$password', 2", $conn);
                 if($result != 1){
                     die("le compte n'as pas pu être crée !");
                 }else{
