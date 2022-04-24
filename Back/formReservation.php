@@ -6,7 +6,6 @@ session_start();
   
 <?php
 if(isset($_SESSION['Suite'])){
-  echo 'non';
     $suite = $_SESSION['Suite'];
     $establishment = $_SESSION['Establishment'];
     
@@ -21,10 +20,9 @@ if(isset($_SESSION['Suite'])){
 <?php
 
 }else{
-  echo 'oui';
 
 
-  require "ConnectToDatabase.php";
+  require ($_SERVER['DOCUMENT_ROOT']."/Back/ConnectToDatabase.php");
   $result = getEstablishmentAndSuite($conn);
 
   $establishmentArr = [];
