@@ -9,18 +9,24 @@ if(!$conn){
   die('Connection error: '). pg_connect_error();
 }
 
+
+function selectFromDatabase($table, $key, $data, $conn){
+  $result = pg_query($conn, "SELECT * FROM $table WHERE $key = '$data'");
+  return $result;
+}
+
 function insertintoDatabase($table, $key, $data, $conn){
   $query = "INSERT INTO $table($key) VALUES($data)";
   $result = pg_query($query);
   return $result;
 }
 
-function selectFromDatabase($table, $key, $data, $conn){
-  $query = "SELECT * FROM $table WHERE $key = '$data'";
-  $result = pg_query($query);
-  $row = pg_fetch_all($result, PGSQL_ASSOC);
-  return $row;
-}
+// function selectFromDatabase($table, $key, $data, $conn){
+//   $query = "SELECT * FROM $table WHERE $key = '$data'";
+//   $result = pg_query($query);
+//   $row = pg_fetch_all($result, PGSQL_ASSOC);
+//   return $row;
+// }
 
 function selectAndFromDatabase($table, $key1, $data1, $key2, $data2, $conn){
   $query = "SELECT * FROM $table WHERE $key1 = '$data1' AND $key2 = '$data2'";
