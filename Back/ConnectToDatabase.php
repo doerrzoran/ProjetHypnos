@@ -1,7 +1,7 @@
 <?php
 echo 'hello';
 // connect to database
-$conn = pg_connect("host=heroku-postgresql dbname=postgresql-tapered-22363");
+$conn = pg_connect("host=ec2-63-32-248-14.eu-west-1.compute.amazonaws.com dbname=dfsrbf4pagn23n user=qrtrrqgjywffca port=5432 password=7537f48e0ddc569f78f58808220b37e0430d58f186a680c8a61216700223bf27");
 
 // check connection
 
