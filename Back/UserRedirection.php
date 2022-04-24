@@ -2,7 +2,7 @@
 
 require_once 'UserID.php';
 echo 'ici</br>';
-print_r($role);
+echo $role;
 
 // if($role == 1){
 //     header('Location: ../Front/PageAdmin.php');
