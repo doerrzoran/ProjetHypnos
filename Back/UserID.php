@@ -11,7 +11,7 @@ if(isset($_SESSION['id'])){
     $role = $_SESSION['role'];
     echo $role;
 }else{
-
+echo 'non</br>';
 }
 
 
