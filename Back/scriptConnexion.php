@@ -6,6 +6,7 @@ $infoConnexion = $_POST;
 If(!isset($infoConnexion['Mail']) || !isset($infoConnexion['password'])){
   echo ' ';
 }else{
+  echo 'oui';
   $mail = $infoConnexion['Mail'];
   $password = $infoConnexion['password'];
   require_once "Identification.php";
