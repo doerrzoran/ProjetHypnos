@@ -27,7 +27,6 @@ function selectFromDatabase($table, $key, $data, $conn){
     echo "Une erreur s'est produite.\n";
     exit;
   }
-  print_r($result);
   $row = pg_fetch_row($result);
   print_r($row);
   return $row;

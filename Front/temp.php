@@ -2,5 +2,11 @@
     require_once "../Back/ConnectToDatabase.php";
     selectFromDatabase("user_hypnos", "name", "Doerr", $conn);
     echo("Resultat ici :".'</br>');
-    print_r($row);
+    if(!$row)
+    {
+        echo("pas de résultats");
+    }
+    else {
+        print_r($row);
+    }
 ?>
