@@ -1,6 +1,7 @@
 <?php
 
 require_once 'UserID.php';
+echo 'ici</br>';
 print_r($role);
 
 // if($role == 1){

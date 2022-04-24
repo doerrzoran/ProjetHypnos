@@ -1,5 +1,5 @@
 <?php
-
+echo 'la</br>';
 
 session_start();
 if(isset($_SESSION['id'])){
