@@ -9,6 +9,7 @@ if(isset($_SESSION['id'])){
     $mail = $_SESSION['mail'];
     $password = $_SESSION['password'];
     $role = $_SESSION['role'];
+    echo $role;
 }else{
 
 }
