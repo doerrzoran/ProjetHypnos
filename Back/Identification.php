@@ -1,7 +1,7 @@
 <?php
 require_once "ConnectToDatabase.php";
 echo "identification.php</br>";
-$users = selectFromDatabase('user_hypnos', 'Mail', $mail, $conn);
+$users = selectFromDatabase('user_hypnos', 'mail', $mail, $conn);
 
 if($users == NULL){
   echo "utilisateur inconnu!"; 
@@ -10,12 +10,12 @@ if($users == NULL){
   foreach($users as $user){
     echo 'toujours</br>';
     session_start();
-    $_SESSION['ID'] = $user['ID'];
-    $_SESSION['Name'] = $user['Name'];
-    $_SESSION['Firstname'] = $user['Firstname'];
-    $_SESSION['Mail'] = $user['Mail'];
-    $_SESSION['Password'] = $user['Password'];
-    $_SESSION['Role'] = $user['Role'];
+    $_SESSION['id'] = $user['id'];
+    $_SESSION['name'] = $user['name'];
+    $_SESSION['firstname'] = $user['firstname'];
+    $_SESSION['mail'] = $user['mail'];
+    $_SESSION['password'] = $user['password'];
+    $_SESSION['role'] = $user['role'];
     echo 'encore</br>';
     require_once 'UserRedirection.php';
   }
