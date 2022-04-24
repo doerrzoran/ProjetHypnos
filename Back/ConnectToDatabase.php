@@ -7,10 +7,7 @@ $conn = pg_connect("host=ec2-63-32-248-14.eu-west-1.compute.amazonaws.com dbname
 
 if(!$conn){
   die('Connection error: '). pg_connect_error();
-}else{
-  echo "conecté";
 }
-
 
 function insertintoDatabase($table, $key, $data, $conn){
   $query = "INSERT INTO $table($key) VALUES($data)";
