@@ -5,7 +5,7 @@ $infoConnexion = $_POST;
 var_dump($infoConnexion);
 
 If(!isset($infoConnexion['Mail']) || !isset($infoConnexion['password'])){
-  echo ' ';
+  echo 'non ';
 }else{
   $mail = $infoConnexion['Mail'];
   $password = $infoConnexion['password'];
