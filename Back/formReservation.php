@@ -6,6 +6,7 @@ session_start();
   
 <?php
 if(isset($_SESSION['Suite'])){
+  echo 'non';
     $suite = $_SESSION['Suite'];
     $establishment = $_SESSION['Establishment'];
     
