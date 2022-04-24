@@ -1,6 +1,6 @@
 <?php
 require_once "ConnectToDatabase.php";
-
+echo "identification.php</br>";
 $users = selectFromDatabase('user_hypnos', 'Mail', $mail, $conn);
 
 if($users == NULL){

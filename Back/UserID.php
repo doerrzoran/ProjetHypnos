@@ -1,5 +1,5 @@
 <?php
-echo 'ici';
+echo 'userID.php';
 
 session_start();
 if(isset($_SESSION['ID'])){
