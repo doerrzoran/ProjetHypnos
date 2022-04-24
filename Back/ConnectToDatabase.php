@@ -15,7 +15,7 @@ function selectFromDatabase($table, $key, $data, $conn){
   // $inter = $sql;
   // echo($sql.'/n');
   // $result = pg_query($conn, $inter);
-  $result = pg_query($conn, "select $key from user_hypnos");
+  $result = pg_query($conn, "select $key from $table");
   $row = pg_fetch_row($result);
   return $row;
 }
