@@ -1,7 +1,7 @@
 <?php
 
 echo '1';
-session_start();
+// session_start();
 echo '2';
 if(isset($_SESSION['id'])){
     echo '3';
