@@ -1,5 +1,5 @@
 <?php
-echo 'Userredirection.php</br>';
+
 require_once 'UserID.php';
 
 if($role == 1){

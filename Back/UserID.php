@@ -1,14 +1,14 @@
 <?php
-echo 'userID.php';
+
 
 session_start();
-if(isset($_SESSION['ID'])){
-    $user = $_SESSION['ID'];
-    $name = $_SESSION['Name'];
-    $firstname = $_SESSION['Firstname'];
-    $mail = $_SESSION['Mail'];
-    $password = $_SESSION['Password'];
-    $role = $_SESSION['Role'];
+if(isset($_SESSION['id'])){
+    $user = $_SESSION['id'];
+    $name = $_SESSION['nme'];
+    $firstname = $_SESSION['firstname'];
+    $mail = $_SESSION['mail'];
+    $password = $_SESSION['password'];
+    $role = $_SESSION['role'];
 }else{
 
 }
