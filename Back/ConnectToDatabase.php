@@ -11,7 +11,7 @@ if(!$conn){
 
 
 function selectFromDatabase($table, $key, $data, $conn){
-  $result = pg_query($conn, "select * from $table where $key = $data");
+  $result = pg_query($conn, "select $key from $table");
   $row = pg_fetch_row($result);
   return $row;
 }

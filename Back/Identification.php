@@ -1,7 +1,7 @@
 <?php
 require_once "ConnectToDatabase.php";
 echo "identification.php</br>";
-$users = selectFromDatabase('user_hypnos', 'mail', $mail, $conn);
+$users = selectFromDatabase('user_hypnos', '*', $mail, $conn);
 
 if($users == NULL){
   echo "utilisateur inconnu!"; 
