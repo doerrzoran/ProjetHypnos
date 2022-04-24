@@ -22,12 +22,14 @@ function selectFromDatabase($table, $key, $data, $conn){
   // } catch (Exception $e) {
   //   echo 'Exception reçue : ',  $e->getMessage(), "\n";
   // }
-  $result = pg_query($conn, "SELECT name FROM user_hypnos");
+  $result = pg_query($conn, "select * from user_hypnos");
   if (!$result) {
     echo "Une erreur s'est produite.\n";
     exit;
   }
+  print_r($result);
   $row = pg_fetch_row($result);
+  print_r($row);
   return $row;
 }
 
