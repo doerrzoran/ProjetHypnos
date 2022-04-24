@@ -37,7 +37,7 @@ function selectAndFromDatabase($table, $key1, $data1, $key2, $data2, $conn){
 }
 
 function getEstablishmentAndSuite($conn){
-  $query = "SELECT e.ID, e.Name, s.ID suite_id, s.Title FROM establishment e JOIN suite s ON s.establishment = e.ID";
+  $query = "SELECT e.id, e.name, s.id suite_id, s.title FROM establishment e JOIN suite s ON s.establishment = e.id";
   $result = pg_query($query);
   $row = pg_fetch_all($result, PGSQL_ASSOC);
   return $row;
