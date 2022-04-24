@@ -13,7 +13,7 @@ if(!$conn){
 function selectFromDatabase($table, $key, $data, $conn){
   try {
     $result = pg_query_params($conn, "SELECT * FROM $1 WHERE $2 = $3", [$table, $key, $data]);
-    $row = pg_fetch_row($result);
+    $row = pg_fetch_array($result);
     return $row;
   } catch (Exception $e) {
     echo 'Exception reçue : ',  $e->getMessage(), "\n";
