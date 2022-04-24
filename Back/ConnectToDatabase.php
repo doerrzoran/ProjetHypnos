@@ -1,7 +1,7 @@
 <?php
 echo 'hello';
 // connect to database
-$conn = pg_connect('postgresql-tapered-22363');
+$conn = pg_connect("host=heroku-postgresql dbname=postgresql-tapered-22363");
 
 // check connection
 
