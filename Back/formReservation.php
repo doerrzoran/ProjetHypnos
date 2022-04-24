@@ -24,7 +24,7 @@ if(isset($_SESSION['Suite'])){
   echo '1';
 
 
-  // require "ConnectToDatabase.php";
+  require "ConnectToDatabase.php";
  echo '2';
   echo 'non';
   $result = getEstablishmentAndSuite($conn);
