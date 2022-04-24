@@ -11,6 +11,10 @@ if(!$conn){
 
 
 function selectFromDatabase($table, $key, $data, $conn){
+  if(!$conn){
+    die('Connection error: '). pg_connect_error();
+  }
+  echo("On joue la requête selectFromDatabase");
   // try {
   //   $result = pg_query_params($conn, "SELECT * FROM $1 WHERE $2 = $3", [$table, $key, $data]);
   //   $row = pg_fetch_array($result);
@@ -19,6 +23,10 @@ function selectFromDatabase($table, $key, $data, $conn){
   //   echo 'Exception reçue : ',  $e->getMessage(), "\n";
   // }
   $result = pg_query($conn, "SELECT name FROM user_hypnos");
+  if (!$result) {
+    echo "Une erreur s'est produite.\n";
+    exit;
+  }
   $row = pg_fetch_row($result);
   return $row;
 }
