@@ -7,8 +7,10 @@ if($users == NULL){
   echo "utilisateur inconnu!"; 
 }else{
   echo 'utilisateur identifié</br>';
+  var_dump($users).'</br>';
   foreach($users as $user){
     echo 'toujours</br>';
+    var_dump($user).'</br>';
     session_start();
     $_SESSION['id'] = $user['id'];
     $_SESSION['name'] = $user['name'];
