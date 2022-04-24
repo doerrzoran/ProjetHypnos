@@ -11,11 +11,7 @@ if(!$conn){
 
 
 function selectFromDatabase($table, $key, $data, $conn){
-  // $sql = "select * from ". $table ." WHERE ". $key ." = ".$data;
-  // $inter = $sql;
-  // echo($sql.'/n');
-  // $result = pg_query($conn, $inter);
-  $result = pg_query($conn, "select $key from $table");
+  $result = pg_query($conn, "select * from $table where $key = $data");
   $row = pg_fetch_row($result);
   return $row;
 }
