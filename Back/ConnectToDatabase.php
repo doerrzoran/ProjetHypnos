@@ -1,4 +1,5 @@
 <?php
+echo 'hello';
 // connect to database
 $conn = mysqli_connect('localhost', 'Zoran', 'test1234', 'hypnos_bdd');
 
