@@ -1,7 +1,7 @@
 <?php
 require_once "ConnectToDatabase.php";
 $user = selectFromDatabase('user_hypnos', '*', $mail, $conn);
-
+print_r($user);
 if($user == NULL){
 
 }else{
