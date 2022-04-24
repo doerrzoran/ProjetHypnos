@@ -18,7 +18,7 @@ function selectFromDatabase($table, $key, $data, $conn){
   // } catch (Exception $e) {
   //   echo 'Exception reçue : ',  $e->getMessage(), "\n";
   // }
-  $result = pg_query($conn, "SELECT * FROM user_hypnos");
+  $result = pg_query($conn, "SELECT name FROM user_hypnos");
   $row = pg_fetch_row($result);
   return $row;
 }
