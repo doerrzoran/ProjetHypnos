@@ -1,16 +1,16 @@
 <?php
 require_once "ConnectToDatabase.php";
 echo "identification.php</br>";
-$users = selectFromDatabase('user_hypnos', '*', $mail, $conn);
+$user = selectFromDatabase('user_hypnos', '*', $mail, $conn);
 
-if($users == NULL){
+if($user == NULL){
   echo "utilisateur inconnu!"; 
 }else{
   echo 'utilisateur identifié</br>';
-  var_dump($users).'</br>';
-  foreach($users as $user){
+  var_dump($user).'</br>';
+  // foreach($users as $user){
     echo 'toujours</br>';
-    var_dump($user).'</br>';
+    // var_dump($user).'</br>';
     session_start();
     $_SESSION['id'] = $user['id'];
     $_SESSION['name'] = $user['name'];
@@ -20,6 +20,6 @@ if($users == NULL){
     $_SESSION['role'] = $user['role'];
     echo 'encore</br>';
     require_once 'UserRedirection.php';
-  }
+  // }
 
 }
