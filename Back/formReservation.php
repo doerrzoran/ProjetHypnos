@@ -22,7 +22,7 @@ if(isset($_SESSION['Suite'])){
 }else{
 
 
-  require ($_SERVER['DOCUMENT_ROOT']."/Back/ConnectToDatabase.php");
+  require "../Back/ConnectToDatabase.php";
   $result = getEstablishmentAndSuite($conn);
 
   $establishmentArr = [];
