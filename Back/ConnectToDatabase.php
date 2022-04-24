@@ -20,6 +20,12 @@ function selectFromDatabase($table, $key, $data, $conn){
   return $row;
 }
 
+function executeQuery($sql, $conn){
+  $result = pg_query($sql, $inter);
+  $row = pg_fetch_row($result);
+  return $row;
+}
+
 function insertintoDatabase($table, $key, $data, $conn){
   $query = "INSERT INTO $table($key) VALUES($data)";
   $result = pg_query($query);
