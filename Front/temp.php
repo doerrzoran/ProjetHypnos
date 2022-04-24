@@ -1,7 +1,7 @@
 <?php
     require_once "../Back/ConnectToDatabase.php";
-    // $resultquery = selectFromDatabase("user_hypnos", "name", "Doerr", $conn);
-    $resultquery = executeQuery("select * from user_hypnos", $conn);
+    $resultquery = selectFromDatabase("user_hypnos", "name", "Doerr", $conn);
+    // $resultquery = executeQuery("select * from user_hypnos", $conn);
     echo("Resultat ici :".'</br>');
     if(!$resultquery)
     {
