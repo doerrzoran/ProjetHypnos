@@ -22,7 +22,7 @@ if(isset($_SESSION['Suite'])){
 }else{
   
 
-  require_once "../Back/ConnectToDatabase.php";
+  require_once "ConnectToDatabase.php";
  
   $result = getEstablishmentAndSuite($conn);
 
