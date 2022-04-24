@@ -3,7 +3,9 @@ require_once "ConnectToDatabase.php";
 $user = selectFromDatabase('user_hypnos', '*', $mail, $conn);
 
 if($user == NULL){
+
 }else{
+  echo $user['id'];
     session_start();
    var_dump($user['id']);
     $_SESSION['id'] = $user['id'];
