@@ -12,7 +12,8 @@ if(!$conn){
 
 function selectFromDatabase($table, $key, $data, $conn){
   $result = pg_query($conn, "SELECT * FROM $table WHERE $key = '$data'");
-  return $result;
+  $row = pg_fetch_row($result)
+  return $row;
 }
 
 function insertintoDatabase($table, $key, $data, $conn){
