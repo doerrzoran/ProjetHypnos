@@ -1,6 +1,6 @@
 <?php
 require_once 'UserID.php';
-
+echo 'ici';
 if($role == 1){
     header('Location: ../Front/PageAdmin.php');
   }elseif($role == 2){
