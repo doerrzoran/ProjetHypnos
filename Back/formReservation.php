@@ -21,8 +21,7 @@ if(isset($_SESSION['Suite'])){
 
 }else{
 
-
-  require "../Back/ConnectToDatabase.php";
+  // require "../Back/ConnectToDatabase.php";
   $result = getEstablishmentAndSuite($conn);
 
   $establishmentArr = [];
