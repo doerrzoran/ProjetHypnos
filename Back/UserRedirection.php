@@ -1,6 +1,7 @@
 <?php
-require_once 'UserID.php';
 echo 'Userredirection.php</br>';
+require_once 'UserID.php';
+
 if($role == 1){
     header('Location: ../Front/PageAdmin.php');
   }elseif($role == 2){
