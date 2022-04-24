@@ -2,9 +2,9 @@
 <?php
 session_start();
 
-?><form method='POST' action='../Back/scriptReservation.php' enctype='multipart/form-data'> 
+?><p></p><form method='POST' action='../Back/scriptReservation.php' enctype='multipart/form-data'>
+  
 <?php
-
 if(isset($_SESSION['Suite'])){
     $suite = $_SESSION['Suite'];
     $establishment = $_SESSION['Establishment'];
@@ -20,6 +20,8 @@ if(isset($_SESSION['Suite'])){
 <?php
 
 }else{
+  echo 'oui';
+
 
   require "ConnectToDatabase.php";
   $result = getEstablishmentAndSuite($conn);
@@ -36,7 +38,6 @@ if(isset($_SESSION['Suite'])){
   
 
 ?>
-    <form method='POST' action='../Back/scriptReservation.php' enctype='multipart/form-data'>
          <label>veuillez choisir un établissement :</label>
            <select name='establishment' id='establishmentID' onchange="callPHP('data='+getOptionVal())">
             <?php

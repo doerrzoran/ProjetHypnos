@@ -1,0 +1,65 @@
+CREATE TABLE IF NOT EXISTS User_Ref(
+  ID serial PRIMARY KEY,
+  Label VARCHAR(250) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS user_hypnos(
+  ID serial PRIMARY KEY,
+  Name VARCHAR (250) NOT NULL,  
+  Firstname VARCHAR (250) NOT NULL,  
+  Mail VARCHAR (250) NOT NULL,  
+  Password VARCHAR (250) NOT NULL,  
+  Role INTEGER NOT NULL,
+  FOREIGN KEY(Role) REFERENCES User_Ref(ID)
+);
+
+CREATE TABLE IF NOT EXISTS Establishment(
+  ID serial PRIMARY KEY,
+  Address VARCHAR(250) NOT NULL,
+  City VARCHAR(250) NOT NULL,
+  Name VARCHAR(250) NOT NULL,
+  Manager INTEGER NOT NULL,
+  FOREIGN KEY(Manager) REFERENCES User_hypnos(ID)
+);
+
+CREATE TABLE IF NOT EXISTS Suite(
+  ID serial PRIMARY KEY,
+  Title VARCHAR(250) NOT NULL,  
+  Establishment INTEGER NOT NULL,  
+  Price DECIMAL NOT NULL,  
+  IsOccupied BOOLEAN NOT NULL,  
+  BookingLink VARCHAR(250) NOT NULL,  
+  Description VARCHAR(1000) NOT NULL,  
+  MainPic VARCHAR(250) NOT NULL,  
+  Gallery VARCHAR(250) NOT NULL,
+  Gallery2 VARCHAR(250) NOT NULL,
+  Gallery3 VARCHAR(250) NOT NULL,
+  FOREIGN KEY(Establishment) REFERENCES Establishment(ID)  
+);
+
+CREATE TABLE IF NOT EXISTS SubjectMessage_Ref(
+  ID serial PRIMARY KEY,
+  Label VARCHAR(250) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Message(
+  ID serial PRIMARY KEY,
+  Name VARCHAR(250) NOT NULL,
+  Firstname VARCHAR(250) NOT NULL,
+  Mail VARCHAR(250) NOT NULL,
+  MessageBody VARCHAR(1000) NOT NULL,
+  Recipient INTEGER NOT NULL,
+  Subject INTEGER NOT NULL,
+  FOREIGN KEY(Recipient) REFERENCES User_hypnos(ID), 
+  FOREIGN KEY(Subject) REFERENCES SubjectMessage_Ref(ID) 
+);
+
+CREATE TABLE IF NOT EXISTS Booking(
+  ID serial PRIMARY KEY,
+  StartingDate DATE NOT NULL,
+  EndingDate DATE NOT NULL,
+  Suite INTEGER NOT NULL,
+  Client INTEGER NOT NULL,
+  FOREIGN KEY(Suite) REFERENCES Suite(ID),
+  FOREIGN KEY(Client) REFERENCES User_hypnos(ID)
+);
