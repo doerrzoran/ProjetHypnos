@@ -20,8 +20,12 @@ if(isset($_SESSION['Suite'])){
 <?php
 
 }else{
+  echo 'oui';
 
-  // require "../Back/ConnectToDatabase.php";
+
+  require "ConnectToDatabase.php";
+
+  echo 'non';
   $result = getEstablishmentAndSuite($conn);
 
   $establishmentArr = [];
