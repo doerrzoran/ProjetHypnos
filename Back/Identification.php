@@ -1,12 +1,12 @@
 <?php
 require_once "ConnectToDatabase.php";
-echo 'oui';
 
 $users = selectFromDatabase('user_hypnos', 'Mail', $mail, $conn);
 
 if($users == NULL){
   echo "utilisateur inconnu!"; 
 }else{
+  echo 'oui';
   foreach($users as $user){
     session_start();
     $_SESSION['ID'] = $user['ID'];
