@@ -11,13 +11,16 @@ if(!$conn){
 
 
 function selectFromDatabase($table, $key, $data, $conn){
-  try {
-    $result = pg_query_params($conn, "SELECT * FROM $1 WHERE $2 = $3", [$table, $key, $data]);
-    $row = pg_fetch_array($result);
-    return $row;
-  } catch (Exception $e) {
-    echo 'Exception reçue : ',  $e->getMessage(), "\n";
-  }
+  // try {
+  //   $result = pg_query_params($conn, "SELECT * FROM $1 WHERE $2 = $3", [$table, $key, $data]);
+  //   $row = pg_fetch_array($result);
+  //   return $row;
+  // } catch (Exception $e) {
+  //   echo 'Exception reçue : ',  $e->getMessage(), "\n";
+  // }
+  $result = pg_query($conn, "SELECT * FROM user_hypnos");
+  $row = pg_fetch_row($result);
+  return $row;
 }
 
 function insertintoDatabase($table, $key, $data, $conn){
