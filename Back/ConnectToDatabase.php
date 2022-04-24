@@ -11,22 +11,12 @@ if(!$conn){
 
 
 function selectFromDatabase($table, $key, $data, $conn){
-  if(!$conn){
-    die('Connection error: '). pg_connect_error();
-  }
-  echo("On joue la requête selectFromDatabase");
-    $result = pg_query_params($conn, "SELECT * FROM $1 WHERE $2 = $3", [$table, $key, $data]);
-    $row = pg_fetch_array($result);
-    return $row;
-  // }
+  $sql = "SELECT * FROM ". $table ."WHERE ". $key ." = ".$data;
+  echo($sql.'n/');
+  $result = pg_query($conn, $sql);
   // $result = pg_query($conn, "select * from user_hypnos");
-  // if (!$result) {
-  //   echo "Une erreur s'est produite.\n";
-  //   exit;
-  // }
-  // $row = pg_fetch_row($result);
-  // print_r($row);
-  // return $row;
+  $row = pg_fetch_row($result);
+  return $row;
 }
 
 function insertintoDatabase($table, $key, $data, $conn){
