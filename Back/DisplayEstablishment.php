@@ -13,7 +13,7 @@ foreach($establishments as $establishment){
     echo $establishment['name'].'</br>';
     echo $establishment['address'].'</br>';
     echo $establishment['city'].'</br>';
-    echo $establishment['manager'].'</br>';
+    
 
     $establishmentID = $establishment['id'];
     require "formModifyEstablishment.php";

@@ -6,5 +6,5 @@
 	    <label>Mot de passe:</label>
 	    <input type="text" name="password">
 	</div>
-    <button type="submit" class="btn btn-primary">suppression du compte</button>
+    <button type="submit">suppression du compte</button>
 </form>
