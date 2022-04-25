@@ -55,16 +55,16 @@ echo '4';
 foreach($suites as $suite){
   echo '5';
   var_dump($suite);
-    $suiteID = $suite['0'];
+    $suiteID = $suite['id'];
     $suiteTitle = $suite['title'];
-    $suitePrice = $suite['3'];
-    $isOccupied = $suite['4'];
-    $suiteBookingLink = $suite['5'];
-    $suiteDescription = $suite['6'];
-    $suiteMainPic = $suite['7'];
-    $suiteGallery = $suite['8'];
-    $suiteGallery2 = $suite['9'];
-    $suiteGallery3 = $suite['10'];
+    $suitePrice = $suite['price'];
+    $isOccupied = $suite['isoccupied'];
+    $suiteBookingLink = $suite['bookinglink'];
+    $suiteDescription = $suite['description'];
+    $suiteMainPic = $suite['mainpic'];
+    $suiteGallery = $suite['gallery'];
+    $suiteGallery2 = $suite['gallery2'];
+    $suiteGallery3 = $suite['gallery3'];
   echo '6';
   echo '<div >
           <span>
