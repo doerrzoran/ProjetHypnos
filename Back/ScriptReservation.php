@@ -4,7 +4,7 @@ require_once 'UserID.php';
 
 if(!isset($_SESSION['id'])){
     require_once "UserID.php";
-    header('location: ../Front/Redirectino.php'); 
+    header('location: ../Front/Redirection.php'); 
 }else{
     $user = $_SESSION['id'];
     $userFirstname = $_SESSION['userFirstname'];
