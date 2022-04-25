@@ -33,27 +33,27 @@ function insertintoDatabase($table, $key, $data, $conn){
 
 function selectAndFromDatabase($table, $key1, $data1, $key2, $data2, $conn){
   $query = "SELECT * FROM $table WHERE $key1 = '$data1' AND $key2 = '$data2'";
-  $result = pg_query($query);
+  $result = pg_query($conn, $query);
   $row = pg_fetch_all($result, PGSQL_ASSOC);
   return $row;
 }
 
 function getEstablishmentAndSuite($conn){
   $query = "SELECT e.id, e.name, s.id suite_id, s.title FROM establishment e JOIN suite s ON s.establishment = e.id";
-  $result = pg_query($query);
+  $result = pg_query($conn, $query);
   $row = pg_fetch_all($result, PGSQL_ASSOC);
   return $row;
 }
 
 function updateDatabase($table, $line, $newvalue, $key, $data, $conn){
   $query = "UPDATE $table SET $line = '$newvalue' WHERE $key = '$data'";
-  $result = pg_query($query);
+  $result = pg_query($conn, $query);
   return $result;
 }
 
 
 function deleteFromDatabase($table, $key, $data, $conn){
   $query = "DELETE FROM $table WHERE $key = '$data'";
-  $result = pg_query($query);
+  $result = pg_query($conn, $query);
   return $result;
 }
