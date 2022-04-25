@@ -1,6 +1,5 @@
 <?php
  require_once 'BookingData.php';
-var_dump($booking);
      
         $bookingID = $booking['0'];
         $bookingSD = $booking['1'];
