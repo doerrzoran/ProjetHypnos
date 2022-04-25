@@ -3,6 +3,7 @@ require_once 'ConnectToDatabase.php';
 
 $infoDeletion = $_POST;
 
+var_dump($infoDeletion);
 if(isset($infoDeletion)){
     $bookingID = $infoDeletion['id'];
 
