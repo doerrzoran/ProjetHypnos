@@ -25,7 +25,7 @@ if(!isset($infoCompte['name']) || !isset($infoCompte['firstname']) || !isset($in
             
             }else{ 
                 $result = insertintoDatabase( 'user_hypnos', 'name, firstname, mail, password, role', "'$name', '$firstname', '$mail', '$password', 3", $conn);
-                if($result != 1){
+                if($result == 1){
                     die("inscription échouée !");
                 }else{
                     require_once "Identification.php";
