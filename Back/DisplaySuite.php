@@ -6,7 +6,7 @@ if(isset($_SESSION['role']) && ($_SESSION['role'] == 2)){
 
   $manager = $_SESSION['id'];
 
-  $establishments = selectFromDatabase('establishment', '*', $manager, $conn);
+  $establishments = selectFromDatabase('establishment', 'manager', $manager, $conn);
 
   foreach($establishments as $establishment){
     $establishmentID = $establishment['id'];
@@ -16,7 +16,7 @@ if(isset($_SESSION['role']) && ($_SESSION['role'] == 2)){
 
   echo '<h1>'.$establishmentName.'</h1>' ;
   
-  $suites = selectFromDatabase('suite', '*', $establishmentID, $conn);
+  $suites = selectFromDatabase('suite', 'establishment', $establishmentID, $conn);
   foreach($suites as $suite){
     $suiteID = $suite['id'];
     $suiteTitle = $suite['title'];
@@ -41,7 +41,7 @@ if(isset($_SESSION['role']) && ($_SESSION['role'] == 2)){
 
   $establishmentID = $_SESSION['EstablishmentID'];
 
-$establishments = selectFromDatabase('establishment', '*', $establishmentID, $conn);
+$establishments = selectFromDatabase('establishment', 'id', $establishmentID, $conn);
 
 
 foreach($establishments as $establishment){
@@ -52,7 +52,7 @@ foreach($establishments as $establishment){
 
 echo '<h1>'.$establishmentName.'</h1>' ;
 
-$suites = selectFromDatabase('suite', '*', $establishmentID, $conn);
+$suites = selectFromDatabase('suite', 'establishment', $establishmentID, $conn);
 
 
 foreach($suites as $suite){

@@ -18,7 +18,7 @@ if(!isset($infoCompte['name']) || !isset($infoCompte['firstname']) || !isset($in
             echo $mail.'</br>';
             require_once "ConnectToDatabase.php";
             echo $mail.'</br>';
-            $verificationMail = selectFromDatabase('user_hypnos', '*', $mail, $conn);
+            $verificationMail = selectFromDatabase('user_hypnos', 'mail', $mail, $conn);
             var_dump($verificationMail);
             if($verificationMail != NULL){
                  exit('cette adresse email est déjà utilisée !');
