@@ -1,6 +1,6 @@
 <?php
  require_once 'BookingData.php';
-    foreach($bookings as $booking){
+
      
         $bookingID = $booking['0'];
         $bookingSD = $booking['1'];
@@ -18,4 +18,4 @@
         }else{
                  
         }    
-    }
+  
