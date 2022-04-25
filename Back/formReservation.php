@@ -2,7 +2,7 @@
 <?php
 session_start();
 
-?><p></p><form method='POST' action='../Back/scriptReservation.php' enctype='multipart/form-data'>
+?><p></p><form method='POST' action='../Back/ScriptReservation.php' enctype='multipart/form-data'>
   
 <?php
 if(isset($_SESSION['suite'])){
