@@ -2,11 +2,11 @@
 require_once "ConnectToDatabase.php";
 require_once 'UserID.php';
 
-if(!isset($_SESSION['ID'])){
+if(!isset($_SESSION['id'])){
     require_once "UserID.php";
-    header('location: ../front/Redirection.php'); 
+    header('location: ../Front/Redirectino.php'); 
 }else{
-    $user = $_SESSION['ID'];
+    $user = $_SESSION['id'];
     $userFirstname = $_SESSION['userFirstname'];
     $infoReservation = $_POST;
     if(!isset($infoReservation)){
@@ -15,7 +15,7 @@ if(!isset($_SESSION['ID'])){
         $suite = $infoReservation['suite'];
         $startDate = $infoReservation['startDate'];
         $endDate = $infoReservation['endDate'];
-        $client = $_SESSION['ID'];
+        $client = $_SESSION['id'];
 
         if(!isset($infoReservation['suite'])){
             echo 'veuillez renseigner une suite';
