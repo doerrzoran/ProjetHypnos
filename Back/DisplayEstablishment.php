@@ -5,8 +5,6 @@ $query = "SELECT* FROM establishment";
 $result = pg_query($conn, $query);
 $establishments = pg_fetch_all($result);
 
-var_dump($establishments);
-
 
 
 

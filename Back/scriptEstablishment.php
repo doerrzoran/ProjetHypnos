@@ -15,7 +15,7 @@ $establishments = selectFromDatabase('establishment', 'id', $establishment, $con
 // $establishments = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 foreach($establishments as $establishment){
-    $establishmentID = $establishment['id'];
+    $establishmentID = $establishment['0'];
     session_start();
     $_SESSION['EstablishmentID'] = $establishmentID;
     header('Location: ../Front/PageEtablissement.php');
