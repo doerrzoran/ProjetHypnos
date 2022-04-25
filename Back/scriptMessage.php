@@ -12,13 +12,13 @@ if(!isset($messageInfo)){
     $subject = $messageInfo["Subject"];
     $messageBody = $messageInfo["MessageBody"];
 
-    $recepients = selectFromDatabase('user_hypnos', 'id', 1152, $conn);
+    $recepients = selectFromDatabase('user_hypnos', '*', 1152, $conn);
     foreach($recepients as $recepient){
         $recepientID = $recepient['id'];
         $destination = $recepient['mail'];
     }
 
-    $labels = selectFromDatabase('SubjectMessage_Ref', 'id', $subject, $conn);
+    $labels = selectFromDatabase('SubjectMessage_Ref', '*', $subject, $conn);
         foreach($labels as $label){
             $subjectID = $label['id'];
             $subject = $label['Label'];

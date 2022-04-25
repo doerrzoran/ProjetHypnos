@@ -20,7 +20,7 @@ if(!isset($_SESSION['id'])){
         if(!isset($infoReservation['suite'])){
             echo 'veuillez renseigner une suite';
         }else{
-            $suites = selectFromDatabase('suite', 'id', $suite, $conn);
+            $suites = selectFromDatabase('suite', '*', $suite, $conn);
             
 
             foreach($suites as $suite){

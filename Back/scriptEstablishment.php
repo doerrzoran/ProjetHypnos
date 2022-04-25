@@ -9,7 +9,7 @@ if(!isset($infoEstablishment)){
     $establishment = $infoEstablishment['establishment'];
 }
 
-$establishments = selectFromDatabase('establishment', 'id', $establishment, $conn);
+$establishments = selectFromDatabase('establishment', '*', $establishment, $conn);
 // $sql = "SELECT* FROM establishment WHERE(id = $establishment)";
 // $result = mysqli_query($conn, $sql);
 // $establishments = mysqli_fetch_all($result, MYSQLI_ASSOC);

@@ -22,7 +22,7 @@ class ScriptInscription{
             die("veuillez entrer un mot de passe identique!");
         }else{
             require_once "ConnectToDatabase.php";
-            $verificationMail = selectFromDatabase('user_hypnos', 'mail', $mail, $conn);
+            $verificationMail = selectFromDatabase('user_hypnos', '*', $mail, $conn);
             if($verificationMail != NULL){
                  exit('cette adresse email est déjà utilisée !');
             
