@@ -54,6 +54,7 @@ echo '4';
 
 foreach($suites as $suite){
   echo '5';
+  var_dump($suite);
     $suiteID = $suite['0'];
     $suiteTitle = $suite['1'];
     $suitePrice = $suite['3'];
@@ -66,7 +67,7 @@ foreach($suites as $suite){
     $suiteGallery3 = $suite['10'];
   echo '6';
   echo '<div >
-          <span >
+          <span>
              <h3>'.$suiteTitle.'</br></h3>
              <a href="http://www.booking.com">"'.$suiteBookingLink.'"</a></br>
              <p>"'.$suiteDescription.'"</p></br>
