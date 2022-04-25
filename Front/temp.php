@@ -8,7 +8,8 @@
     $mail = 'test@mail.com';
     $password = 'test';
     $role = 3;
+    insertintoDatabase($table, $key, $data, $conn);
+    $test = insertintoDatabase('user_hypnos', 'name, firstname, mail, password, role', "'test', 'testant', 'test@mail.com', 'test', '3'", $conn);
     // $query = "INSERT INTO user_hypnos (name, firstname, mail, password, role) VALUES ('test', 'testant', 'test@mail.com', 'test', '3')";
-    $test = insertintoDatabase('user_hypnos', 'name, firstname, mail, password, role', 'test', "'testant', 'test@mail.com', 'test', '3'", $conn);
     // "INSERT INTO book VALUES ('$name','$firstname', '$email','$role')";
   print_r($test);
