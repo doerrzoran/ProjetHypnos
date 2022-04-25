@@ -8,14 +8,7 @@
     $mail = 'test@mail.com';
     $password = 'test';
     $role = 3;
-    $query = "INSERT INTO user_hypnos (name, firstname, mail, password, role) VALUES ('test', 'testant', 'test@mail.com', 'test', '3')";
+    // $query = "INSERT INTO user_hypnos (name, firstname, mail, password, role) VALUES ('test', 'testant', 'test@mail.com', 'test', '3')";
+    $test = insertintoDatabase('user_hypnos', 'name, firstname, mail, password, role', 'test', "'testant', 'test@mail.com', 'test', '3'", $conn);
     // "INSERT INTO book VALUES ('$name','$firstname', '$email','$role')";
-    if (pg_query($conn,$query))
-{
-    echo "saved";
-}
-else
-{
-    echo "error inserting data";
-}
-?>
+  print_r($test);

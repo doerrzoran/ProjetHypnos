@@ -17,8 +17,8 @@ function selectFromDatabase($table, $key, $data, $conn){
 }
 
 function insertintoDatabase($table, $key, $data, $conn){
-  $query = "INSERT INTO $table $key VALUES $data ";
-  $result = pg_query($query);
+  $query = "INSERT INTO $table ($key) VALUES ($data)";
+  $result = pg_query($conn,$query);
   return $result;
 }
 
