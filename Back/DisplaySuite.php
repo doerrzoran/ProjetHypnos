@@ -65,9 +65,9 @@ foreach($suites as $suite){
     $suiteGallery2 = $suite['9'];
     $suiteGallery3 = $suite['10'];
   echo '6';
-     ?><div>
+  echo '<div >
           <span >
-             <h3><?= $suiteTitle ?></br></h3>
+             <h3>'.$suiteTitle.'</br></h3>
              <a href="http://www.booking.com">"'.$suiteBookingLink.'"</a></br>
              <p>"'.$suiteDescription.'"</p></br>
              <p>"'.$suitePrice.'"€</p></br>
@@ -78,8 +78,7 @@ foreach($suites as $suite){
                <img class="d-inline" class="img-responsive" src="'.$suiteGallery2.'"  width="100" height="100">
                <img class="d-inline" class="img-responsive"src="'.$suiteGallery3.'" width="100" height="100">
           </span></br>
-        </div><?php
-
+        </div>';
         echo '7';
     
      if($isOccupied == 1){
