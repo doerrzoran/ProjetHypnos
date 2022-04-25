@@ -41,9 +41,9 @@ if(isset($_SESSION['role']) && ($_SESSION['role'] == 2)){
   echo '2';
   $establishmentID = $_SESSION['EstablishmentID'];
   echo $establishmentID;
-  
 
-$establishments = selectFromDatabase('establishment', 'id', $establishmentID, $conn);
+
+$establishment = selectFromDatabase('establishment', 'id', $establishmentID, $conn);
     $establishmentID = $establishment['0'];
     $establishmentName = $establishment['1'];
     echo '3';
