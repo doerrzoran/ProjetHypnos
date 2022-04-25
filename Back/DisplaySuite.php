@@ -1,7 +1,7 @@
 <?php
 require_once 'ConnectToDatabase.php';
 require_once 'UserID.php';
-echo '1';
+
 if(isset($_SESSION['role']) && ($_SESSION['role'] == 2)){
 
   $manager = $_SESSION['id'];
@@ -38,15 +38,14 @@ if(isset($_SESSION['role']) && ($_SESSION['role'] == 2)){
        echo $suitePrice.' €'.'</br>';
      }
 }else{
-  echo '2';
+  
   $establishmentID = $_SESSION['EstablishmentID'];
-  echo $establishmentID;
 
 
 $establishment = selectFromDatabase('establishment', 'id', $establishmentID, $conn);
     $establishmentID = $establishment['0'];
     $establishmentName = $establishment['3'];
-    echo '3';
+    
 
 echo '<h1>'.$establishmentName.'</h1>' ;
 
@@ -68,7 +67,7 @@ foreach($suites as $suite){
   echo '6';
   echo '<div >
           <span >
-             <h3>"'.$suiteTitle.'"</br></h3>
+             <h3>"'.htmlspecialchars($suiteTitle).'"</br></h3>
              <a href="http://www.booking.com">"'.$suiteBookingLink.'"</a></br>
              <p>"'.$suiteDescription.'"</p></br>
              <p>"'.$suitePrice.'"€</p></br>
