@@ -33,7 +33,8 @@ if(!isset($_SESSION['ID'])){
                         header('Location: ../front/PageClient.php');
                     }
             }
-        }  
+        } 
+         
     
     }
 }
