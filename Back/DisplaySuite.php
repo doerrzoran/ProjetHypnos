@@ -16,12 +16,12 @@ if(isset($_SESSION['role']) && ($_SESSION['role'] == 2)){
   
   $suites = selectAllFromDatabase('suite', 'establishment', $establishmentID, $conn);
   foreach($suites as $suite){
-    $suiteID = $suite['0'];
-    $suiteTitle = $suite['1'];
-    $suitePrice = $suite['3'];
-    $isOccupied = $suite['4'];
-    $suiteBookingLink = $suite['5'];
-    $suiteDescription = $suite['6'];
+    $suiteID = $suite['id'];
+    $suiteTitle = $suite['title'];
+    $suitePrice = $suite['price'];
+    $isOccupied = $suite['isoccupied'];
+    $suiteBookingLink = $suite['bookinglink'];
+    $suiteDescription = $suite['description'];
     
 
        echo '</br>';
