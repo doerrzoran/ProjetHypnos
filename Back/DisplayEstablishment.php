@@ -1,10 +1,11 @@
 <?php
 include_once 'ConnectToDatabase.php';
 
-$sql = 'SELECT* FROM establishment';
-$result = mysqli_query($conn, $sql);
-$resultCheck = mysqli_num_rows($result);
-$establishments = mysqli_fetch_all($result, MYSQLI_ASSOC);
+$query = "SELECT* FROM establishment";
+$result = pg_query($conn, $query);
+$establishments = pg_fetch_row($result);
+
+var_dump($establishments);
 
 
 
