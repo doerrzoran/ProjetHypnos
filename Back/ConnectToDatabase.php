@@ -10,10 +10,9 @@ if(!$conn){
 }
 
 
-function selectFromDatabase($table, $key, $data, $conn){
+function selectFromDatabase($table, $key, $conn){
   $result = pg_query($conn, "select $key from $table");
   $row = pg_fetch_row($result);
-  echo $data.'</br>';
   return $row;
 }
 
