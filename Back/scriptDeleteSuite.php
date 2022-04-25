@@ -5,9 +5,9 @@ $infoDeletion = $_POST;
 var_dump($infoDeletion);
 
 if(isset($infoDeletion)){
-    $suiteID = $infoDeletion['ID'];
+    $suiteID = $infoDeletion['id'];
 
-    $deletion = deleteFromDatabase('suite', 'ID', $suiteID, $conn);
+    $deletion = deleteFromDatabase('suite', 'id', $suiteID, $conn);
     var_dump($deletion);
     if($deletion == 1){
         header('location: ../Front/PageGerant.php');

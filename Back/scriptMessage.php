@@ -6,26 +6,26 @@ $messageInfo = $_POST;
 if(!isset($messageInfo)){
     
 }else{
-    $senderName = $messageInfo["Name"];
-    $senderFirstname = $messageInfo["Firstname"];
-    $senderMail = $messageInfo["Mail"];
+    $senderName = $messageInfo["name"];
+    $senderFirstname = $messageInfo["firstname"];
+    $senderMail = $messageInfo["mail"];
     $subject = $messageInfo["Subject"];
     $messageBody = $messageInfo["MessageBody"];
 
-    $recepients = selectFromDatabase('user_hypnos', 'ID', 1152, $conn);
+    $recepients = selectFromDatabase('user_hypnos', 'id', 1152, $conn);
     foreach($recepients as $recepient){
-        $recepientID = $recepient['ID'];
-        $destination = $recepient['Mail'];
+        $recepientID = $recepient['id'];
+        $destination = $recepient['mail'];
     }
 
-    $labels = selectFromDatabase('SubjectMessage_Ref', 'ID', $subject, $conn);
+    $labels = selectFromDatabase('SubjectMessage_Ref', 'id', $subject, $conn);
         foreach($labels as $label){
-            $subjectID = $label['ID'];
+            $subjectID = $label['id'];
             $subject = $label['Label'];
         }
 
 
-    $result = insertintoDatabase('Message', 'Name, Firstname, mail, MessageBody, Recipient, Subject', "'$senderName', '$senderFirstname', '$senderMail', '$messageBody', '$recepientID',  '$subjectID'", $conn);
+    $result = insertintoDatabase('message', 'name, firstname, mail, MessageBody, Recipient, Subject', "'$senderName', '$senderFirstname', '$senderMail', '$messageBody', '$recepientID',  '$subjectID'", $conn);
 
     if($result == 0){
        die('message non enregistré !</br>');

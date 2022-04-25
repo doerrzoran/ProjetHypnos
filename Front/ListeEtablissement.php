@@ -13,7 +13,7 @@
     <nav>
       
       <form method="POST" action="../Back/scriptEstablishment.php" enctype="multipart/form-data">
-        <select name="Establishment">
+        <select name="establishment">
           <option value="1">Hotel Hypnos Paris</option>
           <option value="2">Hotel Hypnos Bordeaux</option>
           <option value="3">Hotel Hypnos Saint-Malo</option>

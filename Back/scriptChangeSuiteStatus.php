@@ -5,9 +5,9 @@ require_once 'ConnectToDataBase.php';
 
  if(isset($infoStatus)){
      $isOccupied = $infoStatus['isOccupied'];
-     $suite = $infoStatus['ID'];
+     $suite = $infoStatus['id'];
 
-     $update = updateDatabase('Suite', 'isOccupied', $isOccupied, 'ID', $suite, $conn);
+     $update = updateDatabase('Suite', 'isOccupied', $isOccupied, 'id', $suite, $conn);
      if($update != 0){
          header("Location: ../Front/PageGerant.php");
      }else{

@@ -1,6 +1,6 @@
 <form method="POST" action="../Back/scriptModifySuite.php"enctype="multipart/form-data">
     <label>Title</label>
-    <input name="ID" type="hidden" value ="<?= $suiteID ?>">
+    <input name="id" type="hidden" value ="<?= $suiteID ?>">
     <input name="Title" type="text">
     <label>Description</label>
     <input name="Description" type="text">

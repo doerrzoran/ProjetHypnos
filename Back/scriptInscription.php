@@ -22,12 +22,12 @@ class ScriptInscription{
             die("veuillez entrer un mot de passe identique!");
         }else{
             require_once "ConnectToDatabase.php";
-            $verificationMail = selectFromDatabase('user_hypnos', 'Mail', $mail, $conn);
+            $verificationMail = selectFromDatabase('user_hypnos', 'mail', $mail, $conn);
             if($verificationMail != NULL){
                  exit('cette adresse email est déjà utilisée !');
             
             }else{ 
-                $result = insertintoDatabase( 'user_hypnos', 'Name, Firstname, Mail, Password, Role', "'$name', '$firstname', '$mail', '$password', 3", $conn);
+                $result = insertintoDatabase( 'user_hypnos', 'name, firstname, mail, password, role', "'$name', '$firstname', '$mail', '$password', 3", $conn);
                 if($result != 1){
                     die("inscription échouée !");
                 }else{
@@ -43,13 +43,13 @@ class ScriptInscription{
 
 $infoCompte = $_POST;
 
-if(!isset($infoCompte['Name']) || !isset($infoCompte['Firstname']) || !isset($infoCompte['email']) || !isset($infoCompte['Password']) || !isset($infoCompte['Password2'])) {
+if(!isset($infoCompte['name']) || !isset($infoCompte['firstname']) || !isset($infoCompte['email']) || !isset($infoCompte['password']) || !isset($infoCompte['Password2'])) {
     echo('');
   }else{ 
-        $name = $infoCompte['Name'];
-        $firstname = $infoCompte['Firstname'];
+        $name = $infoCompte['name'];
+        $firstname = $infoCompte['firstname'];
         $mail = $infoCompte['email'];
-        $password = $infoCompte['Password'];
+        $password = $infoCompte['password'];
         $password2 = $infoCompte['Password2'];
       
     $scriptInscription = new ScriptInscription($name, $firstname, $mail, $password, $password2);
@@ -62,11 +62,11 @@ if(!isset($infoCompte['Name']) || !isset($infoCompte['Firstname']) || !isset($in
     // if($password != $password2){
     //     die("veuillez entrer un mot de passe identique!");
     // }else{
-    //     $sql = "SELECT* FROM User WHERE Mail = '$mail'";
+    //     $sql = "SELECT* FROM User WHERE mail = '$mail'";
     //     $result = mysqli_query($conn, $sql);
     //     $verificationMail = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-    //     $sql = "SELECT* FROM User WHERE Password ='$password'";
+    //     $sql = "SELECT* FROM User WHERE password ='$password'";
     //     $result = mysqli_query($conn, $sql);
     //     $verificationPassword = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
@@ -75,7 +75,7 @@ if(!isset($infoCompte['Name']) || !isset($infoCompte['Firstname']) || !isset($in
     //     }elseif($verificationPassword == 0){
     //             die('ce mot de passe est déja utilisé !');
     //     }else{ 
-    //         $sql = "INSERT INTO User(Name, Firstname, Mail,	Password, Role) VALUES('$name', '$firstname', '$mail', '$password', 3)";
+    //         $sql = "INSERT INTO User(name, firstname, mail,	password, role) VALUES('$name', '$firstname', '$mail', '$password', 3)";
     //         $result = mysqli_query($conn, $sql);
     //         if($result != 1){
     //             die("inscription échouée !");

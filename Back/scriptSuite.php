@@ -4,9 +4,9 @@ $infoSuite = $_POST;
 
 if($infoSuite){
     session_start();
-    $_SESSION['Suite'] = $infoSuite['Suite'];
-    var_dump($_SESSION['Establishment']);
-    $_SESSION['Establishment'] = $infoSuite['Establishment'];
+    $_SESSION['suite'] = $infoSuite['suite'];
+    var_dump($_SESSION['establishment']);
+    $_SESSION['establishment'] = $infoSuite['establishment'];
     header('Location: ../Front/PageReservation.php');
 }else{
 

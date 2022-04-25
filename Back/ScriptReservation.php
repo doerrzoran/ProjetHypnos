@@ -2,11 +2,11 @@
 require_once "ConnectToDatabase.php";
 require_once 'UserID.php';
 
-if(!isset($_SESSION['ID'])){
+if(!isset($_SESSION['id'])){
     require_once "UserID.php";
     header('location: ../Front/Redirection.php'); 
 }else{
-    $user = $_SESSION['ID'];
+    $user = $_SESSION['id'];
     $userFirstname = $_SESSION['userFirstname'];
     $infoReservation = $_POST;
     if(!isset($infoReservation)){
@@ -15,17 +15,17 @@ if(!isset($_SESSION['ID'])){
         $suite = $infoReservation['suite'];
         $startDate = $infoReservation['startDate'];
         $endDate = $infoReservation['endDate'];
-        $client = $_SESSION['ID'];
+        $client = $_SESSION['id'];
 
         if(!isset($infoReservation['suite'])){
             echo 'veuillez renseigner une suite';
         }else{
-            $suites = selectFromDatabase('Suite', 'ID', $suite, $conn);
+            $suites = selectFromDatabase('suite', 'id', $suite, $conn);
             
 
             foreach($suites as $suite){
-                $suiteID = $suite['ID'];
-                $result = insertintoDatabase('Booking', 'StartingDate, EndingDate, Suite,  Client', "'$startDate', '$endDate', '$suiteID',  '$client'", $conn);
+                $suiteID = $suite['id'];
+                $result = insertintoDatabase('booking', 'StartingDate, EndingDate, suite,  client', "'$startDate', '$endDate', '$suiteID',  '$client'", $conn);
                     if($result != 1){
                         die("reservation échouée !");
                     }else{

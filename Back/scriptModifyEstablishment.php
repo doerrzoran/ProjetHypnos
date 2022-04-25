@@ -9,11 +9,11 @@ echo '</br>';
 if(!isset($infoNewManager)){
 
 }else{
-    $manager = $infoNewManager['Manager'];
-    $establishment = $infoNewManager['Establishment'];
+    $manager = $infoNewManager['manager'];
+    $establishment = $infoNewManager['establishment'];
     
 
-    $newEstablishment = updateDatabase("Establishment", "Manager", $manager, "ID", $establishment, $conn);
+    $newEstablishment = updateDatabase("establishment", "manager", $manager, "id", $establishment, $conn);
     var_dump($newEstablishment);
     if($newEstablishment != 1){
         echo "erreur d'enregistrement";

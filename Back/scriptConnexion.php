@@ -2,11 +2,11 @@
 require_once "ConnectToDatabase.php";
 $infoConnexion = $_POST;
 
-If(!isset($infoConnexion['Mail']) || !isset($infoConnexion['password'])){
+If(!isset($infoConnexion['mail']) || !isset($infoConnexion['password'])){
   echo ' ';
 }else{
 
-  $mail = $infoConnexion['Mail'];
+  $mail = $infoConnexion['mail'];
   $password = $infoConnexion['password'];
   require_once "Identification.php";
 }

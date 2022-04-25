@@ -22,11 +22,11 @@ class ScriptInscription{
             die("veuillez entrer un mot de passe identique!");
         }else{
             require_once "ConnectToDatabase.php";
-            $verificationMail = selectFromDatabase('user_hypnos', 'Mail', $mail, $conn);
+            $verificationMail = selectFromDatabase('user_hypnos', 'mail', $mail, $conn);
             if($verificationMail != NULL){
                  die('cette adresse email est déjà utilisée !');
             }else{ 
-                $result = insertintoDatabase( 'user_hypnos', 'Name, Firstname, Mail, Password, Role', "'$name', '$firstname', '$mail', '$password', 2", $conn);
+                $result = insertintoDatabase( 'user_hypnos', 'name, firstname, mail, password, role', "'$name', '$firstname', '$mail', '$password', 2", $conn);
                 if($result != 1){
                     die("le compte n'as pas pu être crée !");
                 }else{
@@ -42,13 +42,13 @@ class ScriptInscription{
 
 $infoManager = $_POST;
 
-if(!isset($infoManager['Name']) || !isset($infoManager['Firstname']) || !isset($infoManager['email']) || !isset($infoManager['Password']) || !isset($infoManager['Password2'])) {
+if(!isset($infoManager['name']) || !isset($infoManager['firstname']) || !isset($infoManager['email']) || !isset($infoManager['password']) || !isset($infoManager['Password2'])) {
     echo('');
   }else{ 
-        $name = $infoManager['Name'];
-        $firstname = $infoManager['Firstname'];
+        $name = $infoManager['name'];
+        $firstname = $infoManager['firstname'];
         $mail = $infoManager['email'];
-        $password = $infoManager['Password'];
+        $password = $infoManager['password'];
         $password2 = $infoManager['Password2'];
       
     $scriptInscription = new ScriptInscription($name, $firstname, $mail, $password, $password2);

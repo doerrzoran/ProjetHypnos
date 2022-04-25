@@ -6,16 +6,16 @@ $infoEstablishment = $_POST;
 if(!isset($infoEstablishment)){
     echo 'non reçu';
 }else{
-    $establishment = $infoEstablishment['Establishment'];
+    $establishment = $infoEstablishment['establishment'];
 }
 
-$establishments = selectFromDatabase('Establishment', 'ID', $establishment, $conn);
-// $sql = "SELECT* FROM Establishment WHERE(ID = $establishment)";
+$establishments = selectFromDatabase('establishment', 'id', $establishment, $conn);
+// $sql = "SELECT* FROM establishment WHERE(id = $establishment)";
 // $result = mysqli_query($conn, $sql);
 // $establishments = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 foreach($establishments as $establishment){
-    $establishmentID = $establishment['ID'];
+    $establishmentID = $establishment['id'];
     session_start();
     $_SESSION['EstablishmentID'] = $establishmentID;
     header('Location: ../Front/PageEtablissement.php');

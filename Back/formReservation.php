@@ -5,9 +5,9 @@ session_start();
 ?><p></p><form method='POST' action='../Back/scriptReservation.php' enctype='multipart/form-data'>
   
 <?php
-if(isset($_SESSION['Suite'])){
-    $suite = $_SESSION['Suite'];
-    $establishment = $_SESSION['Establishment'];
+if(isset($_SESSION['suite'])){
+    $suite = $_SESSION['suite'];
+    $establishment = $_SESSION['establishment'];
     
     
 ?>
@@ -29,9 +29,9 @@ if(isset($_SESSION['Suite'])){
   $establishmentArr = [];
   
   foreach($result as $row){
-    if(in_array($row['Name'], $establishmentArr)){
+    if(in_array($row['name'], $establishmentArr)){
     }else{
-      $establishmentArr[$row['ID']] = $row['Name'];
+      $establishmentArr[$row['id']] = $row['name'];
     }
   }
 

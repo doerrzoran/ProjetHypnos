@@ -2,11 +2,11 @@
  require_once 'BookingData.php';
     foreach($bookings as $booking){
      
-        $bookingID = $booking['ID'];
+        $bookingID = $booking['id'];
         $bookingSD = $booking['StartingDate'];
         $bookingED = $booking['EndingDate'];
-        $bookingSuite = $booking['Suite'];
-        $booking = $booking['Client'];
+        $bookingSuite = $booking['suite'];
+        $booking = $booking['client'];
         echo 'votre reservations: du '.$bookingSD.' au '.$bookingED.'</br>';
 
         $origin = new DateTime($bookingSD);

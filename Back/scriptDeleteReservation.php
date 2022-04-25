@@ -4,9 +4,9 @@ require_once 'ConnectToDatabase.php';
 $infoDeletion = $_POST;
 
 if(isset($infoDeletion)){
-    $bookingID = $infoDeletion['ID'];
+    $bookingID = $infoDeletion['id'];
 
-    $deletion = deleteFromDatabase('Booking', 'ID', $bookingID, $conn);
+    $deletion = deleteFromDatabase('booking', 'id', $bookingID, $conn);
     var_dump($deletion);
     if($deletion == 1){
        header('location: ../Front/PageClient.php');

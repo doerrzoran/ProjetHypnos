@@ -6,9 +6,9 @@ require_once 'ConnectToDataBase.php';
  var_dump($infochangeSuite);
 
  if(isset($infochangeSuite)){
-    $suite = $infochangeSuite['ID'];
+    $suite = $infochangeSuite['id'];
     foreach($infochangeSuite as $line => $newValue){
-     $update = updateDatabase('Suite', $line, $newValue, 'ID', $suite, $conn);
+     $update = updateDatabase('Suite', $line, $newValue, 'id', $suite, $conn);
      if($update == 0){
          die('erreur');
     }else
