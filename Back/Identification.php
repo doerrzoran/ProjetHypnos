@@ -6,6 +6,7 @@ if($user == NULL){
 
 }else{
     var_dump($user);
+    print_r($user);
     echo '4';
     session_start();
     $_SESSION['id'] = $user['0'];
