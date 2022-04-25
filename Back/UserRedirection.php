@@ -1,5 +1,5 @@
 <?php
-
+echo '6';
 require_once 'UserID.php';
 
 
