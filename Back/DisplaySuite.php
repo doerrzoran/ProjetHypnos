@@ -7,23 +7,25 @@ if(isset($_SESSION['role']) && ($_SESSION['role'] == 2)){
   $manager = $_SESSION['id'];
 
   $establishments = selectFromDatabase('establishment', 'manager', $manager, $conn);
-
-  foreach($establishments as $establishment){
-    $establishmentID = $establishment['id'];
-    $establishmentName = $establishment['name'];
-  }
+    $establishmentID = $establishment['0'];
+    $establishmentName = $establishment['1'];
+ 
 
 
   echo '<h1>'.$establishmentName.'</h1>' ;
   
-  $suites = selectFromDatabase('suite', 'establishment', $establishmentID, $conn);
+  $suites = selectAllFromDatabase('suite', 'establishment', $establishmentID, $conn);
   foreach($suites as $suite){
-    $suiteID = $suite['id'];
-    $suiteTitle = $suite['title'];
-  
+    $suiteID = $suite['0'];
+    $suiteTitle = $suite['1'];
+    $suitePrice = $suite['3'];
+    $isOccupied = $suite['4'];
+    $suiteBookingLink = $suite['5'];
+    $suiteDescription = $suite['6'];
+    
+
        echo '</br>';
-       echo '<h3>'.htmlspecialchars($suite['title']).'</br></h3>';
-       $isOccupied = $suite['IsOccupied'];
+       echo '<h3>'.$suiteTitle.'</br></h3>';
        if($isOccupied == 1){
          echo "Cette chambre est reservée</br>";
        }else{
@@ -31,50 +33,52 @@ if(isset($_SESSION['role']) && ($_SESSION['role'] == 2)){
        }
        require '../Back/formChangeSuiteStatus.php';
        require '../Back/formModifySuite.php';   
-       echo  '<a href="../www.booking.com">'.htmlspecialchars($suite['BookingLink']).'</a></br>';
-       echo $suite['description'].'</br>';
-       echo $suite['MainPic'].'</br>';
-       echo $suite['gallery'].'</br>';
-       echo $suite['price'].' €'.'</br>';
+       echo  '<a href="../www.booking.com">'.$suiteBookingLink.'</a></br>';
+       echo $suiteDescription.'</br>';
+       echo $suitePrice.' €'.'</br>';
      }
 }else{
 
   $establishmentID = $_SESSION['EstablishmentID'];
 
 $establishments = selectFromDatabase('establishment', 'id', $establishmentID, $conn);
-
-
-foreach($establishments as $establishment){
-  $establishmentName = $establishment['name'];
-  
-}
+    $establishmentID = $establishment['0'];
+    $establishmentName = $establishment['1'];
 
 
 echo '<h1>'.$establishmentName.'</h1>' ;
 
-$suites = selectFromDatabase('suite', 'establishment', $establishmentID, $conn);
+$suites = selectAllFromDatabase('suite', 'establishment', $establishmentID, $conn);
 
 
 foreach($suites as $suite){
-  $suiteID = $suite['id'];
-  $suiteTitle = $suite['title'];
+    $suiteID = $suite['0'];
+    $suiteTitle = $suite['1'];
+    $suitePrice = $suite['3'];
+    $isOccupied = $suite['4'];
+    $suiteBookingLink = $suite['5'];
+    $suiteDescription = $suite['6'];
+    $suiteMainPic = $suite['7'];
+    $suiteGallery = $suite['8'];
+    $suiteGallery2 = $suite['9'];
+    $suiteGallery3 = $suite['10'];
 
   echo '<div >
           <span >
-             <h3>"'.$suite['title'].'"</br></h3>
-             <a href="http://www.booking.com">"'.$suite['BookingLink'].'"</a></br>
-             <p>"'.$suite['description'].'"</p></br>
-             <p>"'.$suite['price'].'"€</p></br>
+             <h3>"'.$suiteTitle.'"</br></h3>
+             <a href="http://www.booking.com">"'.$suiteBookingLink.'"</a></br>
+             <p>"'.$suiteDescription.'"</p></br>
+             <p>"'.$suitePrice.'"€</p></br>
            </span>
            <span>
-               <img  class="img-responsive" src="'.$suite['MainPic'].'" width="300" height="100">;
-               <img class="d-inline"  class="img-responsive" src="'.$suite['gallery'].'"  width="100" height="100">
-               <img class="d-inline" class="img-responsive" src="'.$suite['gallery2'].'"  width="100" height="100">
-               <img class="d-inline" class="img-responsive"src="'.$suite['gallery3'].'" width="100" height="100">
+               <img  class="img-responsive" src="'.$suiteMainPic.'" width="300" height="100">;
+               <img class="d-inline"  class="img-responsive" src="'.$suiteGallery.'"  width="100" height="100">
+               <img class="d-inline" class="img-responsive" src="'.$suiteGallery2.'"  width="100" height="100">
+               <img class="d-inline" class="img-responsive"src="'.$suiteGallery3.'" width="100" height="100">
           </span></br>
         </div>';
 
-      $isOccupied = $suite['IsOccupied'];
+    
      if($isOccupied == 1){
        echo "Cette chambre est reservée</br>";
      }else{

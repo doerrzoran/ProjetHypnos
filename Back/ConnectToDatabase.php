@@ -17,6 +17,13 @@ function selectFromDatabase($table, $key, $data, $conn){
   return $row;
 }
 
+function selectAllFromDatabase($table, $key, $data, $conn){
+  $query = "SELECT * FROM $table WHERE $key = '$data'";
+  $result = pg_query($conn, $query);
+  $all = pg_fetch_all($result);
+  return $all;
+}
+
 function insertintoDatabase($table, $key, $data, $conn){
   $query = "INSERT INTO $table ($key) VALUES ($data)";
   $result = pg_query($conn, $query);
