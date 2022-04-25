@@ -50,11 +50,10 @@ $establishment = selectFromDatabase('establishment', 'id', $establishmentID, $co
 echo '<h1>'.$establishmentName.'</h1>' ;
 
 $suites = selectAllFromDatabase('suite', 'establishment', $establishmentID, $conn);
-echo '4';
+
 
 foreach($suites as $suite){
-  echo '5';
-  var_dump($suite);
+  
     $suiteID = $suite['id'];
     $suiteTitle = $suite['title'];
     $suitePrice = $suite['price'];
@@ -65,7 +64,7 @@ foreach($suites as $suite){
     $suiteGallery = $suite['gallery'];
     $suiteGallery2 = $suite['gallery2'];
     $suiteGallery3 = $suite['gallery3'];
-  echo '6';
+  
   echo '<div >
           <span>
              <h3>'.$suiteTitle.'</br></h3>
@@ -80,13 +79,13 @@ foreach($suites as $suite){
                <img class="d-inline" class="img-responsive"src="'.$suiteGallery3.'" width="100" height="100">
           </span></br>
         </div>';
-        echo '7';
+        
     
      if($isOccupied == 1){
-      echo '8';
+      
        echo "Cette chambre est reservée</br>";
      }else{
-      echo '9';
+      
        echo "Disponible</br>";
        ?><form method="POST" action="../Back/scriptSuite.php" enctype="multipart/form-data">
          <input type="hidden" name="suite" value="<?= $suiteTitle ?>">
