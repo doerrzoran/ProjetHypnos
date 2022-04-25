@@ -1,16 +1,11 @@
 <?php
     require_once "../Back/ConnectToDatabase.php";
-    // function selectFromDatabase($table, $key, $data, $conn)
-    // $resultquery = selectFromDatabase("user_hypnos", "firstname", "Doerr", $conn);
-    $values = array("id" => 12, "name" => "test", "firstname" => "testant", "mail" => "test@test.com", "password" => "test", "role" => 3);
-    $resultquery = pg_insert($conn, "user_hypnos", $values, PGSQL_DML_EXEC);
-    var_dump($resultquery);
-    if(!$resultquery)
-    {
-        echo("pas de résultats");
-    }
-    else {
-        print_r($resultquery);
+    $query = "INSERT INTO user_hypnos Values('Test', 'Testant', test@test.mail', 'test', 3)";
+    $result = pg_query($conn, $query);
+    if($reult){
+        echo 'oui';
+    }else{
+        echo 'non';
     }
 
 
