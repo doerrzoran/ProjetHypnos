@@ -21,7 +21,7 @@ if(!isset($_SESSION['id'])){
             echo 'veuillez renseigner une suite';
         }else{
             $suite = selectFromDatabase('Suite', 'id', $suite, $conn);
-            
+            var_dump($suite);
                 $suiteID = $suite['0'];
                 $result = insertintoDatabase('Booking', 'StartingDate, EndingDate, Suite,  Client', "'$startDate', '$endDate', '$suiteID',  '$client'", $conn);
                     if($result != 1){
