@@ -1,5 +1,7 @@
 <?php
+echo 'test1';
 require_once 'ConnectToDatabase.php';
+echo 'test2';
 require_once 'UserID.php';
 echo '1';
 if(isset($_SESSION['role']) && ($_SESSION['role'] == 2)){
