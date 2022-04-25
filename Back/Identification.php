@@ -1,6 +1,6 @@
 <?php
 require_once "ConnectToDatabase.php";
-$user = selectFromDatabase('user_hypnos', '*', $mail, $conn);
+$user = selectFromDatabase('user_hypnos', 'mail', $mail, $conn);
 if($user == NULL){
 
 }else{
