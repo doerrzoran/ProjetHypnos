@@ -8,7 +8,7 @@ if(isset($_SESSION['role']) && ($_SESSION['role'] == 2)){
 
   $establishments = selectFromDatabase('establishment', 'manager', $manager, $conn);
     $establishmentID = $establishment['0'];
-    $establishmentName = $establishment['1'];
+    $establishmentName = $establishment['3'];
  
 
 
