@@ -23,6 +23,7 @@ class ScriptInscription{
         }else{
             require_once "ConnectToDatabase.php";
             $verificationMail = selectFromDatabase('user_hypnos', '*', $mail, $conn);
+            var_dump($verificationMail);
             if($verificationMail != NULL){
                  exit('cette adresse email est déjà utilisée !');
             
