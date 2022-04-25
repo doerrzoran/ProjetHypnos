@@ -28,7 +28,7 @@ if(!isset($_SESSION['id'])){
                         die("reservation échouée !");
                     }else{
                         require_once "BookingData.php";
-                        header('Location: ../front/PageClient.php');
+                        header('Location: ../Front/PageClient.php');
                     }
         }  
     
