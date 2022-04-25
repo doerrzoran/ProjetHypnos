@@ -17,7 +17,7 @@ if(isset($_SESSION['role']) && ($_SESSION['role'] == 2)){
   $suites = selectAllFromDatabase('suite', 'establishment', $establishmentID, $conn);
   foreach($suites as $suite){
     $suiteID = $suite['0'];
-    $suiteTitle = $suite['1'];
+    $suiteTitle = $suite['title'];
     $suitePrice = $suite['3'];
     $isOccupied = $suite['4'];
     $suiteBookingLink = $suite['5'];
