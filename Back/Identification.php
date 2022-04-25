@@ -5,6 +5,7 @@ $user = selectFromDatabase('user_hypnos', 'mail', $mail, $conn);
 if($user == NULL){
 
 }else{
+    var_dump($user);
     echo '4';
     session_start();
     $_SESSION['id'] = $user['0'];
