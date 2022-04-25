@@ -24,7 +24,7 @@ if(!isset($_SESSION['id'])){
             var_dump($suite);
                 $suiteID = $suite['0'];
                 $result = insertintoDatabase('Booking', 'StartingDate, EndingDate, Suite,  Client', "'$startDate', '$endDate', '$suiteID',  '$client'", $conn);
-                    if($result != 1){
+                    if($result == 1){
                         die("reservation échouée !");
                     }else{
                         require_once "BookingData.php";
