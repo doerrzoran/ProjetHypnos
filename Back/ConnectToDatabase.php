@@ -14,8 +14,8 @@ function selectFromDatabase($table, $key, $data, $conn){
   // $result = pg_query($conn, "select $key from $table");
   $query = "SELECT * FROM $table WHERE $key = $data";
   $result = pg_query($conn, $query);
-  $row = pg_fetch_row($result);
-  return $row;
+  // $row = pg_fetch_row($result);
+  return $result;
 }
 
 function insertintoDatabase($table, $key, $data, $conn){
