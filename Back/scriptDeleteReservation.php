@@ -11,7 +11,7 @@ if(isset($infoDeletion)){
     if($deletion == 1){
        echo 'une erreur est survenue';
     }else{
-      header('location: ../Front/PageClient.php');
-}
+        header('location: ../Front/PageClient.php');
+    }
 
  
