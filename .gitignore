@@ -55,3 +55,15 @@
 /Documentation/Livrables/projetHypnos.docx
 /Documentation/Livrables.pdf
 /Documentation/zoran.doerr_GDWFSCAWEXAIII1B_239890_20220421075126685990.doc
+/Back/ConnectToDatabase.php
+/CreateEstablishment.sql
+/CreateFirstAdmin.sql
+/CreateManagers.sql
+/CreateMessageRef.sql
+/CreateSuite.sql
+/CreateUserRef.sql
+/SQL/CreateEstablishment.sql
+/SQL/CreateFirstAdmin.sql
+/SQL/CreateManagers.sql
+/SQL/CreateSuite.sql
+/SQL/CreateTable.sql
