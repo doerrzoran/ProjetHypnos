@@ -23,7 +23,6 @@ if(!isset($_SESSION['ID'])){
             $suite = selectFromDatabase('Suite', 'id', $suite, $conn);
             
 
-            
                 $suiteID = $suite['0'];
                 $result = insertintoDatabase('Booking', 'StartingDate, EndingDate, Suite,  Client', "'$startDate', '$endDate', '$suiteID',  '$client'", $conn);
                     if($result != 1){
