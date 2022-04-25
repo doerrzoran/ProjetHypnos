@@ -10,6 +10,7 @@ if(isset($infoDeletion)){
     var_dump($deletion);
     if($deletion == 1){
        header('location: ../Front/PageClient.php');
+    }
 }else{
     echo 'une erreur est survenue';
 }
