@@ -67,7 +67,7 @@ foreach($suites as $suite){
   echo '6';
   echo '<div >
           <span >
-             <h3>'.$suiteTitle.'</br></h3>
+             <h3>"'.$suite['1'].'"</br></h3>
              <a href="http://www.booking.com">"'.$suiteBookingLink.'"</a></br>
              <p>"'.$suiteDescription.'"</p></br>
              <p>"'.$suitePrice.'"€</p></br>
