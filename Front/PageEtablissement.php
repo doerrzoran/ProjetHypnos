@@ -12,7 +12,7 @@
     ?>
     <nav>
     <?php
-        require_once "../Bck/DisplaySuite.php";
+        require_once "../Back/DisplaySuite.php";
       ?>
     <nav>
     <?php
