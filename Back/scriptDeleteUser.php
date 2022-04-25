@@ -15,7 +15,7 @@ if(!isset($infoDeletion['mail']) || !isset($infoDeletion['password'])){
 
     $deletion = deleteFromDatabase('user_hypnos', 'mail', $mail, $conn);
     var_dump($deletion);
-    if($deletion != 1){
+    if($deletion == 1){
         echo 'une erreur est survenue';
         
     }else{
