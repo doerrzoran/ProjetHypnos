@@ -15,7 +15,9 @@ if(!isset($infoCompte['name']) || !isset($infoCompte['firstname']) || !isset($in
         if($password != $password2){
             die("veuillez entrer un mot de passe identique!");
         }else{
+            echo $mail.'</br>';
             require_once "ConnectToDatabase.php";
+            echo $mail.'</br>';
             $verificationMail = selectFromDatabase('user_hypnos', '*', $mail, $conn);
             var_dump($verificationMail);
             if($verificationMail != NULL){
