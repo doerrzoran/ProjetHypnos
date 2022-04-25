@@ -8,7 +8,7 @@
     $mail = 'test@mail.com';
     $password = 'test';
     $role = 3;
-    $query = "INSERT INTO user_hypnos (name, firstname, mail, password, role) VALUES ('$name', '$firstname', '$mail', '$password', '$role')";
+    $query = "INSERT INTO user_hypnos (name, firstname, mail, password, role) VALUES (test, testant, test@mail.com, test, 3)";
     // "INSERT INTO book VALUES ('$name','$firstname', '$email','$role')";
     if (pg_query($conn,$query))
 {
